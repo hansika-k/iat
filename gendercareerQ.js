@@ -1,9 +1,9 @@
-define(['pipAPI', 'https://github.com/hansika-k/iat/blob/main/gendercareermain.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
-	
+
 	return iatExtension({
 
-	category1 : {
+		category1 : {
 			name : 'Career', //Will appear in the data.
 			title : {
 				media : {word : 'Career'}, //Name of the category presented in the task.
@@ -50,11 +50,11 @@ define(['pipAPI', 'https://github.com/hansika-k/iat/blob/main/gendercareermain.j
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            	{word: 'Atul'},
-				{word: 'Rohan'},
-				{word: 'Aditya'},
-				{word: 'Sameer'},
-				{word: 'Harsh'}
+            	{word: 'Ben'},
+				{word: 'Paul'},
+				{word: 'Daniel'},
+				{word: 'John'},
+				{word: 'Jeffrey'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -68,11 +68,11 @@ define(['pipAPI', 'https://github.com/hansika-k/iat/blob/main/gendercareermain.j
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-          {word: 'Natasha'},
-				{word: 'Aparna'},
-				{word: 'Janhvi'},
-				{word: 'Mansi'},
-				{word: 'Muskaan'}
+          {word: 'Rebecca'},
+				{word: 'Michelle'},
+				{word: 'Emily'},
+				{word: 'Julia'},
+				{word: 'Anna'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
