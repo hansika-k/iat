@@ -50,11 +50,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            	{word: 'Ben'},
-				{word: 'Paul'},
-				{word: 'Daniel'},
-				{word: 'John'},
-				{word: 'Jeffrey'}
+            	{word: 'Harsh'},
+				{word: 'Amit'},
+				{word: 'Aditya'},
+				{word: 'Rohan'},
+				{word: 'Sameer'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -68,11 +68,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-          {word: 'Rebecca'},
-				{word: 'Michelle'},
-				{word: 'Emily'},
-				{word: 'Julia'},
-				{word: 'Anna'}
+          {word: 'Anusha'},
+				{word: 'Aarti'},
+				{word: 'Savita'},
+				{word: 'Lata'},
+				{word: 'Karishma'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
