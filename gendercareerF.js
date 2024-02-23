@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://github.com/hansika-k/iat/blob/main/touchtrue.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
