@@ -21,9 +21,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 		category2 :	{
-			name : 'McDowell's', //Will appear in the data.
+			name : 'McDowell', //Will appear in the data.
 			title : {
-				media : {word : 'McDowell's'}, //Name of the category presented in the task.
+				media : {word : 'McDowell'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
@@ -50,7 +50,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				{word: 'youthful'},
 				{word: 'premium'},
 				{word: 'classic'},
-				{word: 'friend's party'}
+				{word: 'party'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
