@@ -11,11 +11,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            {image: 'IB1.jpg'},
-				{image: 'IB2.jpg'},
-				{image: 'IB3.jpg'},
-				{image: 'IB4.jpg'},
-				{image: 'IB5.jpg'}
+            {image: 'IB1-min.jpg'},
+				{image: 'IB2-min.jpg'},
+				{image: 'IB3-min.jpg'},
+				{image: 'IB4-min.jpg'},
+				{image: 'IB5-min.jpg'}
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -28,11 +28,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-           	{image: 'McD1.jpg'},
-				{image: 'McD2.jpg'},
-				{image: 'McD3.jpg'},
-				{image: 'McD4.jpg'},
-				{image: 'McD5.jpg'}
+           	{image: 'McD1-min.jpg'},
+				{image: 'McD2-min.jpg'},
+				{image: 'McD3-min.jpg'},
+				{image: 'McD4-min.jpg'},
+				{image: 'McD5-min.jpg'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
