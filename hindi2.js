@@ -23,7 +23,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/hindi.js'], fu
 		category2 :	{
 			name : 'अस्थि‍र', //Will appear in the data.
 			title : {
-				media : {word : 'Boring'}, //Name of the category presented in the task.
+				media : {word : 'अस्थि‍र'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
