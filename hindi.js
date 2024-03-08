@@ -30,71 +30,79 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 			//When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
 			category1 : {
-				name : 'टिकाऊ', //Will appear in the data and in the default feedback message.
+				name : 'Black people', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'टिकाऊ'}, //Name of the category presented in the task.
+					media : {word : 'Black people'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'जैविक'},
-					{word: 'प्राकृतिक'},
-					{word: 'पुन उपयोग'},
-					{word: 'ग्‍लास'},
-					{word: 'इलेक्ट्रिक कार'}
+					{word: 'Tyron'},
+					{word: 'Malik'},
+					{word: 'Terrell'},
+					{word: 'Jazmin'},
+					{word: 'Tiara'},
+					{word: 'Shanice'}
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			category2 :	{
-				name : 'अस्थि‍र', //Will appear in the data and in the default feedback message.
+				name : 'White people', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'अस्थि‍र'}, //Name of the category presented in the task.
+					media : {word : 'White people'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'सिंथेटिक'},
-					{word: 'यक्ति-नि‍र्मित'},
-					{word: 'एक उपयोग'},
-					{word: 'प्‍लास्टिक'},
-					{word: 'पेट्रोल कार'}
+					{word: 'Jake'},
+					{word: 'Connor'},
+					{word: 'Bradley'},
+					{word: 'Allison'},
+					{word: 'Emma'},
+					{word: 'Emily'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			attribute1 :
 			{
-				name : 'अच्‍छा',
+				name : 'Bad words',
 				title : {
-					media : {word : 'अच्‍छा'},
+					media : {word : 'Bad words'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'उपयोगी'},
-					{word: 'खुशी'},
-					{word: 'शांति'},
-					{word: 'मुस्‍कुराहट'},
-					{word: 'चमकीला'}
+					{word: 'awful'},
+					{word: 'failure'},
+					{word: 'agony'},
+					{word: 'hurt'},
+					{word: 'horrible'},
+					{word: 'terrible'},
+					{word: 'nasty'},
+					{word: 'evil'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 			},
 			attribute2 :
 			{
-				name : 'बुरा',
+				name : 'Good words',
 				title : {
-					media : {word : 'बुरा'},
+					media : {word : 'Good words'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'बेकार'},
-					{word: 'दुख'},
-					{word: 'युद्ध'},
-					{word: 'धमकी'},
-					{word: 'अंधकार'}
+					{word: 'laughter'},
+					{word: 'happy'},
+					{word: 'glorious'},
+					{word: 'joy'},
+					{word: 'wonderful'},
+					{word: 'peace'},
+					{word: 'pleasure'},
+					{word: 'love'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -155,7 +163,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instWidth : 99, //The width of the instructions stimulus
 			
 			finalText : 'अगले कार्य को जारी रखने के लिए स्पेस दबाएं’, 
-			finalTouchText : 'अगले कार्य को जारी रखने के लिए निचले हरे क्षेत्र को दबाएं ',
+			finalTouchText : 'अगले कार्य को जारी रखने के लिए निचले हरे क्षेत्र को दबाएं',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -188,7 +196,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'<br/>',
 						'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा. दूसरी ओर स्पर्श करें. <u> जितनी जल्दी हो सके बटन दबाएं </u> सटीकता के साथ',
 					'</p>',
-					'<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र .</p>',
+					'<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र </p>',
 				'</div>'
 			].join('\n'),
 
@@ -196,7 +204,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'बाईं उंगली <b>E</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित है <font color="#336600">leftCategory</font>. ' +
-				'<br/> 'दाहिनी उंगली <b>I</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित है <font color="#336600">rightCategory</font>.<br/>' +
+				'<br/> दाहिनी उंगली <b>I</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित है <font color="#336600">rightCategory</font>.<br/>' +
 				'आइटम्स एक के बाद एक दिखाई देंगे <br/><br/>' +
 				'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' +
 				'जारी रखने के लिए दूसरा बटन दबाएँ <br/>' +
@@ -210,12 +218,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
 						'बाईं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं  <font color="#336600">leftCategory</font>.<br/>',
-						''दाहिनी उंगली रखें <b> दाहिने </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं  <font  color="#336600">rightCategory</font>.<br/>',
-						' आइटम्स एक के बाद एक दिखाई देंगे <br/>',
+						'दाहिनी उंगली रखें <b> दाहिने </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं  <font  color="#336600">rightCategory</font>.<br/>',
+						'आइटम्स एक के बाद एक दिखाई देंगे <br/>',
 						'<br/>',
 						'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा . दूसरी ओर स्पर्श करें. <u> जितनी जल्दी हो सके करो </u> सटीकता के साथ',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र </p>',
 				'</div>'
 			].join('\n'),
 
@@ -223,9 +231,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'उपयोग करें <b>E</b> बटन का  <font color="#336600">leftCategory</font> के लिए, और <font color="#0000ff">leftAttribute</font>.<br/> के लिए' + 
-				''उपयोग करें <b>I</b> बटन का  <font color="#336600">rightCategory</font> के लिए, और  <font color="#0000ff">rightAttribute</font>.<br/> के लिए' +
+				'उपयोग करें <b>I</b> बटन का  <font color="#336600">rightCategory</font> के लिए, और  <font color="#0000ff">rightAttribute</font>.<br/> के लिए' +
 				'प्रत्येक वस्तु केवल एक श्रेणी से संबंधित है  <br/><br/>' +
-				'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font>  दिखाई देगा. ' +
+				'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font>  दिखाई देगा.' +
 				'जारी रखने के लिए दूसरा बटन दबाएँ.<br/>' + 
 				'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ'.<br/><br/></p>' +
 				'<p align="center"> कृपया दबाएं <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों.</font></p></div>',
@@ -241,7 +249,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'दाहिनी उंगली रखें <b> दाहिनी </b> हरे क्षेत्र पर <font color="#336600">rightCategory</font> वस्तुओं के लिए और <font color="#0000ff">rightAttribute</font>.</br> के लिए',
 							'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा. दूसरी ओर स्पर्श करें. <u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ'.</br>',
 						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+						'<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र </p>',
 				'</div>'
 			].join('\n'),
 
@@ -264,7 +272,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'बायीं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर <font color="#336600">leftCategory</font> वस्तुओं के लिए और <font color="#0000ff">leftAttribute</font>.<br/> c,
 						'दाहिनी उंगली रखें <b> दाहिनी </b> हरे क्षेत्र पर <font color="#336600">rightCategory</font> वस्तुओं के लिए और  <font color="#0000ff">rightAttribute</font>.<br/> के लिए ',
 						'<br/>',
-						'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ'.<br/>',
+						'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ.<br/>',
 					'</p>',
 					'<p align="center"> स्पर्श करें <b> निचले </b> हरे क्षेत्र को शुरू करने के लिए </p>',
 				'</div>'
