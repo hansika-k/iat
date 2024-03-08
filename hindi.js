@@ -138,11 +138,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Show a reminder what to do on error, throughout the task
 			remindError : true,
 
-			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
+			remindErrorText : '<p align="center" style="font-size:0.6em; font-family:arial">' +
 			'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' +
 			'जारी रखने के लिए दूसरा बटन दबाएं <p/>',
 
-			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
+			remindErrorTextTouch : '<p align="center" style="font-size:1.4em; font-family:arial">' +
 			'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' +
 			'जारी रखने के लिए दूसरी ओर स्पर्श करें <p/>',
 
@@ -260,7 +260,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'उपयोग करें <b>E</b> बटन का <font color="#336600">leftCategory</font> के लिए और <font color="#0000ff">leftAttribute</font>.<br/> के लिए' +
 				'उपयोग करें <b>I</b> बटन का <font color="#336600">rightCategory</font> के लिए और <font color="#0000ff">rightAttribute</font>.<br/> के लिए' +
 				'प्रत्येक वस्तु केवल एक श्रेणी से संबंधित है.<br/><br/>' +
-				'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ'.<.<br/><br/></p>' +
+				'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ'.<br/><br/></p>' +
 				'<p align="center"> कृपया दबाएं <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों. </font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
