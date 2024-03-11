@@ -75,7 +75,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/hinditouch1.js
 		},
 
 		base_url : {//Where are your images at?
-			image : 'https://baranan.github.io/minno-tasks/images/'
+			image : 'https://hansika-k.github.io/iat/imagesjpg/'
 		} 
 	});
 });
