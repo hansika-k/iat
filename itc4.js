@@ -39,14 +39,14 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 		},
 		attribute1 :
 		{
-			name : 'Positive',
+			name : 'Healthy',
 			title : {
-				media : {word : 'Positive'},
+				media : {word : 'Healthy'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
- {word: 'healthy'},
+ {word: 'pure'},
 				{word: 'hygienic'},
 				{word: 'nutritious'},
 				{word: 'fresh'},
@@ -57,14 +57,14 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 		},
 		attribute2 :
 		{
-			name : 'Negative',
+			name : 'Unhealthy',
 			title : {
-				media : {word : 'Negative'},
+				media : {word : 'Unhealthy'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-  {word: 'unhealthy'},
+  {word: 'sick'},
 				{word: 'stale'},
 				{word: 'rotten'},
 				{word: 'impure'},
