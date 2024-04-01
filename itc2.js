@@ -29,10 +29,10 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
            	{word: 'chakki1.jpg'},
-				{word: 'chakki1.jpg'},
-				{word: 'chakki1.jpg'},
-				{word: 'chakki1.jpg'},
-				{word: 'chakki1.jpg'}
+				{word: 'chakki2.jpg'},
+				{word: 'chakki3.jpg'},
+				{word: 'chakki4.jpg'},
+				{word: 'chakki5.jpg'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
