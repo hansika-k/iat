@@ -11,11 +11,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            {word: 'packaged1.jpg'},
-				{word: 'packaged2.jpg'},
-				{word: 'packaged3.jpg'},
-				{word: 'packaged4.jpg'},
-				{word: 'packaged5.jpg'}
+            {image: 'packaged1.jpg'},
+				{image: 'packaged2.jpg'},
+				{image: 'packaged3.jpg'},
+				{image: 'packaged4.jpg'},
+				{image: 'packaged5.jpg'}
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -28,11 +28,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-           	{word: 'chakki1.jpg'},
-				{word: 'chakki2.jpg'},
-				{word: 'chakki3.jpg'},
-				{word: 'chakki4.jpg'},
-				{word: 'chakki5.jpg'}
+           	{image: 'chakki1.jpg'},
+				{image: 'chakki2.jpg'},
+				{image: 'chakki3.jpg'},
+				{image: 'chakki4.jpg'},
+				{image: 'chakki5.jpg'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -46,11 +46,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
- {image: 'healthy'},
-				{image: 'hygienic'},
-				{image: 'nutritious'},
-				{image: 'fresh'},
-				{image: 'tasty'}
+ {word: 'healthy'},
+				{word: 'hygienic'},
+				{word: 'nutritious'},
+				{word: 'fresh'},
+				{word: 'tasty'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -64,11 +64,11 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-  {image: 'unhealthy'},
-				{image: 'stale'},
-				{image: 'rotten'},
-				{image: 'impure'},
-				{image: 'unhygienic'}
+  {word: 'unhealthy'},
+				{word: 'stale'},
+				{word: 'rotten'},
+				{word: 'impure'},
+				{word: 'unhygienic'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
