@@ -14,7 +14,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
             {word: 'clean'},
 				{word: 'pure'},
 				{word: 'healthy'},
-				{word: 'sanitary'},
+				{word: 'sterilized'},
 				{word: 'germ-free'}
 			], 
 			//Stimulus css (style)
