@@ -57,9 +57,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 		},
 		attribute2 :
 		{
-			name : 'Unygienic',
+			name : 'Unhygienic',
 			title : {
-				media : {word : 'Unygienic'},
+				media : {word : 'Unhygienic'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
