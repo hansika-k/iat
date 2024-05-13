@@ -14,8 +14,8 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_hind
             {word: 'साफ'},
 				{word: 'शुद्ध'},
 				{word: 'स्वस्थ'},
-				{word: 'सेनेटरी'},
-				{word: 'रोगाणुमुक्त'}
+				{word: 'संक्रामण रहित'},
+				{word: 'कीटानुरहित'}
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
