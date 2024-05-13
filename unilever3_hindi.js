@@ -21,9 +21,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_hind
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 		category2 :	{
-			name : 'Body Wash', //Will appear in the data.
+			name : 'बॉडी वाश', //Will appear in the data.
 			title : {
-				media : {word : 'Body Wash'}, //Name of the category presented in the task.
+				media : {word : 'बॉडी वाश'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
@@ -66,9 +66,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_hind
 			stimulusMedia : [ //Stimuli content as PIP's media objects
           {word: 'पारलर'},
 				{word: 'स्पा'},
-				{word: 'cosmetics'},
-				{word: 'haircare'},
-				{word: 'skincare'}
+				{word: 'कॉस्मेटिक'},
+				{word: 'हेयर केयर'},
+				{word: 'स्किनकेयर'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
