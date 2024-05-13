@@ -30,9 +30,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_hind
 			stimulusMedia : [ //Stimuli content as PIP's media objects
            	{word: 'पारलर'},
 				{word: 'स्पा'},
-				{word: 'cosmetics'},
-				{word: 'haircare'},
-				{word: 'skincare'}
+				{word: 'कॉस्मेटिक'},
+				{word: 'हेयर केयर'},
+				{word: 'स्किनकेयर'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -50,7 +50,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_hind
 				{word: 'पानी'},
 				{word: 'आवश्यक'},
 				{word: 'बुनियादी'},
-				{word: 'need'}
+				{word: 'आवश्यकता'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -65,10 +65,10 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_hind
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
           {word: 'विलासिता'},
-				{word: 'treat'},
+				{word: 'आलिंगन'},
 				{word: 'अपव्यय'},
 				{word: 'अधिकता'},
-				{word: 'pampering'}
+				{word: 'सजना सँवरना'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
