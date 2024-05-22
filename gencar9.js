@@ -3,9 +3,6 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_feed
 
 	return iatExtension({
 
-		showDebriefing:true,
-		is.Touch:true,
-
 		category1 : {
 			name : 'Career', //Will appear in the data.
 			title : {
