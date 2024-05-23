@@ -11,8 +11,6 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touch_feedback
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            {word: 'Job'},
-				{word: 'Corporation'},
 				{word: 'Salary'},
 				{word: 'Office'},
 				{word: 'Professional'},
@@ -30,12 +28,10 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touch_feedback
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-           	{word: 'Wedding'},
 				{word: 'Marriage'},
 				{word: 'Parents'},
 				{word: 'Relatives'},
 				{word: 'Household'},
-				{word: 'Home'}, 
 				{word: 'Children'}
 			], 
 			//Stimulus css
@@ -79,7 +75,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touch_feedback
 		},
 
 		base_url : {//Where are your images at?
-			image : 'https://baranan.github.io/minno-tasks/images/'
+			image : 'https://hansika-k.github.io/iat/imagesjpg/'
 		},
 	});
 });
