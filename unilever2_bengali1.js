@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_nooverlap.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
@@ -30,7 +30,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 			stimulusMedia : [ //Stimuli content as PIP's media objects
            	{word: 'পার্লার'},
 				{word: 'স্পা'},
-				{word: 'প্রসাধনী'},
+				{word: 'কসমেটিক'},
 				{word: 'চুলের যত্ন'},
 				{word: 'ত্বকের যত্ন'}
 			], 
@@ -57,16 +57,16 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 		},
 		attribute2 :
 		{
-			name : 'প্রবৃত্তি',
+			name : 'ইচ্ছাপূরণ',
 			title : {
-				media : {word : 'প্রবৃত্তি'},
+				media : {word : 'ইচ্ছাপূরণ'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
           {word: 'বিলাসিতা'},
 				{word: 'ট্রিট'},
-				{word: 'বাড়াবাড়ি'},
+				{word: 'অপব্যয়'},
 				{word: 'অতিরিক্ত'},
 				{word: 'প্যাপারিং'}
 			],
