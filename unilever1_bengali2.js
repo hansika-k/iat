@@ -1,61 +1,43 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_bengali.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_nooverlap.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
 
 		category1 : {
-			name : 'পুরুষ', //Will appear in the data.
+			name : 'আমাকে', //Will appear in the data.
 			title : {
-				media : {word : 'পুরুষ'}, //Name of the category presented in the task.
+				media : {word : 'আমাকে'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            {word: 'রাহুল'},
-				{word: 'রোহিত'},
-				{word: 'অভিষেক'},
-				{word: 'আনন্দ'},
-				{word: 'মনীশ'}
+            {word: 'নিজেকে'},
+				{word: 'নিজের থেকে'},
+				{word: 'আমার'},
+				{word: 'স্বয়ং'},
+				{word: 'আমি'}
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 		category2 :	{
-			name : 'মহিলা', //Will appear in the data.
+			name : 'অন্যান্য', //Will appear in the data.
 			title : {
-				media : {word : 'মহিলা'}, //Name of the category presented in the task.
+				media : {word : 'অন্যান্য'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-           	{word: 'আয়ুশি'},
-				{word: 'তানিয়া'},
-				{word: 'রিয়া'},
-				{word: 'দীপিকা'},
-				{word: 'নেহা'}
+           	{word: 'পরিবার'},
+				{word: 'শ্বশুরবাড়ি'},
+				{word: 'স্বামী'},
+				{word: 'শিশু'},
+				{word: 'তাদের'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},
 		attribute1 :
-		{
-			name : 'অস্বাস্থ্যকর',
-			title : {
-				media : {word : 'অস্বাস্থ্যকর'},
-				css : {color:'#0000FF','font-size':'1.8em'},
-				height : 4 //Used to position the "Or" in the combined block.
-			},
-			stimulusMedia : [ //Stimuli content as PIP's media objects
-            	{word: 'নোংরা'},
-				{word: 'অশুদ্ধ'},
-				{word: 'অসুস্থ'},
-				{word: 'নোংরা'},
-				{word: 'দাগ লাগা'}
-			],
-			//Stimulus css
-			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
-		},
-		attribute2 :
 		{
 			name : 'স্বাস্থ্যকর',
 			title : {
@@ -64,11 +46,29 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_beng
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-          {word: 'পরিষ্কার'},
+            	{word: 'পরিষ্কার'},
 				{word: 'বিশুদ্ধ'},
 				{word: 'সুস্থ'},
-				{word: 'স্যানিটারি'},
-				{word: 'জীবাণুমুক্ত'}
+				{word: 'এন্টিসেপটিক'},
+				{word: 'বাণু মুক্ত'}
+			],
+			//Stimulus css
+			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
+		},
+		attribute2 :
+		{
+			name : 'অস্বাস্থ্যকর',
+			title : {
+				media : {word : 'অস্বাস্থ্যকর'},
+				css : {color:'#0000FF','font-size':'1.8em'},
+				height : 4 //Used to position the "Or" in the combined block.
+			},
+			stimulusMedia : [ //Stimuli content as PIP's media objects
+          {word: 'নোংরা'},
+				{word: 'অপবিত্র'},
+				{word: 'অসুস্থ'},
+				{word: 'ময়লা'},
+				{word: 'দাগ'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
