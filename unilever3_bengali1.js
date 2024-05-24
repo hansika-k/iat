@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_nooverlap.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
@@ -66,7 +66,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 			stimulusMedia : [ //Stimuli content as PIP's media objects
           {word: 'পার্লার'},
 				{word: 'স্পা'},
-				{word: 'প্রসাধনী'},
+				{word: 'কসমেটিক'},
 				{word: 'চুলের যত্ন'},
 				{word: 'ত্বকের যত্ন'}
 			],
