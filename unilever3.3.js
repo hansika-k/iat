@@ -49,7 +49,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
             	{word: 'clean'},
 				{word: 'pure'},
 				{word: 'healthy'},
-				{word: 'sterilized'},
+				{word: 'antiseptic'},
 				{word: 'germ-free'}
 			],
 			//Stimulus css
