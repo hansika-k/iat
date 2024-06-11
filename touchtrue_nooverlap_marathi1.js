@@ -316,7 +316,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Texts for the trials that show the debriefing.
 			preDebriefingText : 'तुमचा निकाल पाहण्यासाठी स्पेस दाबा', //Text in the trial that comes before showing the debriefing.
 			preDebriefingTouchText : 'तुमचा निकाल पाहण्यासाठी खालील हिरव्या बटणावर टच करा', //Touch version for the text in the trial that comes before showing the debriefing.
-			debriefingTextTop : 'तुमचा निकाल:', //Will be shown above the feedback text.
+			debriefingTextTop : 'तुमचा निकाल', //Will be shown above the feedback text.
 			//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
 			//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
 			//We strongly recommend that you provide all these details in the debriefing of the experiment.
@@ -334,7 +334,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Error messages in the feedback
 			manyErrors: 'निकाल निश्चित करण्यासाठी खुप जास्त चूका केलेल्या होत्या.',
 			tooFast: 'निकाल निश्चित करण्यासाठी खुप जास्त जलदपणे ट्रायल्स केलेल्या.',
-			notEnough: 'निकाल निश्चित करण्यासाठी पुरेशा ट्रायल्स नव्हत्या.
+			notEnough: 'निकाल निश्चित करण्यासाठी पुरेशा ट्रायल्स नव्हत्या. '
 		};
 
 		// extend the "current" object with the default
