@@ -219,7 +219,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						કેટેગરીને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>.<br/>',
+						'કેટેગરીને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>.<br/>',
 						'કેટેગરીને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર જમણી આંગળી મુકો <font color="#336600">rightCategory</font>.<br/>',
 						'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/>',
 						'<br/>',
@@ -249,7 +249,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="left" style="margin-left:5px">',
 						'<font color="#336600">leftCategory</font> વસ્તુ માટે અને <font color="#0000ff">leftAttribute</font>.</br>' માટે <b>ડાબા</b> ગ્રીન/લીલા વિસ્તાર પર ડાબી આંગળી મુકો,
 						' <font color="#336600">rightCategory</font> વસ્તુ માટે અને  <font color="#0000ff">rightAttribute</font>.</br>' માટે <b>જમણા</b> ગ્રીન/લીલા વિસ્તાર પર જમણી આંગળી મુકો,
-							''જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.</br>',
+							' જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.</br>',
 						'</p>',
 						'<p align="center">શરુ કરવા માટે <b>નીચેના </b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
@@ -298,7 +298,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						' ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!<br/>',
 							'<font color="#336600">leftCategory</font> આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
 							'<font color="#336600">rightCategory</font> આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
-							'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.',
+							' આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.',
 							'<br/>',
 							'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/>',
 						'</p>',
@@ -315,9 +315,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Texts for the trials that show the debriefing.
 			preDebriefingText : 'તમારું રીઝલ્ટ/પરિણામ જોવા માટે સ્પેસ દબાવો', //Text in the trial that comes before showing the debriefing.
 			preDebriefingTouchText : 'તમારું રીઝલ્ટ/પરિણામ જોવા માટે નીચેના લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો', //Touch version for the text in the trial that comes before showing the debriefing.
-			debriefingTextTop : 'તમારું રીઝલ્ટ/પરિણામ:', //Will be shown above the feedback text.
+			debriefingTextTop : 'તમારું રીઝલ્ટ/પરિણામ', //Will be shown above the feedback text.
 			//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
-			//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
+			//In Project Implicit's websiteu can see that we added much text to explain that there is still much unknown about the meaning of these results.
 			//We strongly recommend that you provide all these details in the debriefing of the experiment.
 			debriefingTextBottom : 'આ રીઝલ્ટ/પરિણામ તમારી વર્તણુકનું ચોક્કસ મુલ્યાંકન નથી, તે ફક્ત શૈક્ષણિક હેતુઓ માટે પૂરું પાડવામાં આવ્યું છે. ચાલુ રાખવા માટે સ્પેસ દબાવો.', //Will be shown below the feedback text. 
             debriefingTextBottomTouch : 'આ રીઝલ્ટ/પરિણામ તમારી વર્તણુકનું ચોક્કસ મુલ્યાંકન નથી, તે ફક્ત શૈક્ષણિક હેતુઓ માટે પૂરું પાડવામાં આવ્યું છે.  ચાલુ રાખવા માટે લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.',
@@ -325,13 +325,13 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
 			//and categoryB is the name of the category that is found to be associated with attribute2.
-			fb_strong_Att1WithCatA_Att2WithCatB : ‘તમારા જવાબોએ categoryA પર categoryB માટે મજબુત ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.’,
+			fb_strong_Att1WithCatA_Att2WithCatB : ' તમારા જવાબોએ categoryA પર categoryB માટે મજબુત ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.’,
 			fb_moderate_Att1WithCatA_Att2WithCatB : ' તમારા જવાબોએ categoryA પર categoryB માટે મધ્યમ ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.',
 			fb_slight_Att1WithCatA_Att2WithCatB : ' તમારા જવાબોએ categoryA પર categoryB માટે સહેજ ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.',
 			fb_equal_CatAvsCatB : ' તમારા જવાબોએ categoryA અને categoryB વચ્ચે કોઈ ઓટોમેટીક પસંદગીનું સૂચન કર્યું નથી.',
 
 			//Error messages in the feedback
-			manyErrors: પરિણામ/રીઝલ્ટ નક્કી કરવામાં ઘણી બધી ભૂલો કરવામાં આવી હતી.',
+			manyErrors: ' પરિણામ/રીઝલ્ટ નક્કી કરવામાં ઘણી બધી ભૂલો કરવામાં આવી હતી.',
 			tooFast: ' પરિણામ/રીઝલ્ટ નક્કી કરવા માટે ઘણા ઝડપી ટ્રાયલ્સ હતા.',
 			notEnough: ' પરિણામ/રીઝલ્ટ નક્કી કરવા માટે પૂરતા ટ્રાયલ્સ ન હતા.'
 		};
