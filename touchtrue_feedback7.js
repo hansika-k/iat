@@ -2,7 +2,7 @@
 define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
 
 	/**
-	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Elad
+	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Gal
 	 * @param  {Object} options Options that replace the defaults...
 	 * @return {Object}         PIP script
 	**/
@@ -11,13 +11,16 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 	{
 		var API = new APIConstructor();		
 		var scorer = new Scorer();
-		var piCurrent = API.getCurrent();
+        var piCurrent = API.getCurrent();
+		
 
 		//Here we set the settings of our task. 
 		//Read the comments to learn what each parameters means.
 		//You can also do that from the outside, with a dedicated jsp file.
 		var iatObj =
 		{
+			fullscreen:false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
+        
 			isTouch:true, //Set whether the task is on a touch device.
 			//Set the canvas of the task
 			canvas : {
@@ -161,7 +164,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			orCss : {'font-size':'1.8em', color:'#000000'},
 			
 			instWidth : 99, //The width of the instructions stimulus
-			
+            
 			finalText : 'Press space to continue to the next task', 
 			finalTouchText : 'Touch the bottom green area to continue to the next task',
 
@@ -190,7 +193,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the the <b>left</b> green area for items that belong to the category <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Put a left finger over the <b>left</b> green area for items that belong to the category <font color="#0000ff">leftAttribute</font>.<br/>',
 						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/>',
 						'Items will appear one at a time.<br/>',
 						'<br/>',
@@ -282,8 +285,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'<b>Watch out, the labels have changed position!</b><br/>' +
-				'Use the left finger on the <b>E</b> key for <font color="#336600">leftCategory</font>.<br/>' +
-				'Use the right finger on the <b>I</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
+				'Put the left finger on the <b>E</b> key for <font color="#336600">leftCategory</font>.<br/>' +
+				'Put the right finger on the <b>I</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
 			instSwitchCategoriesTouch: [
@@ -309,7 +312,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instThirdCombinedTouch : 'instFirstCombined', //this means that we're going to use the instFirstCombined property for the third combined block as well. You can change that.
 			instFourthCombinedTouch : 'instSecondCombined', //this means that we're going to use the instSecondCombined property for the fourth combined block as well. You can change that.
 
-			showDebriefing:true, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
+			showDebriefing:false, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
 			//Texts for the trials that show the debriefing.
 			preDebriefingText : 'Press space to see your result', //Text in the trial that comes before showing the debriefing.
 			preDebriefingTouchText : 'Touch the bottom green area to see your result', //Touch version for the text in the trial that comes before showing the debriefing.
@@ -318,15 +321,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
 			//We strongly recommend that you provide all these details in the debriefing of the experiment.
 			debriefingTextBottom : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.  Press space to continue.', //Will be shown below the feedback text. 
-            		debriefingTextBottomTouch : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.  Touch the green area to continue.',
-			
+            debriefingTextBottomTouch : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.  Touch the green area to continue.',
 			//The default feedback messages for each cutoff -
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
 			//and categoryB is the name of the category that is found to be associated with attribute2.
-			fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB being attribute2 over categoryA being attribute2.',
-			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB being attribute2 over categoryA being attribute2.',
-			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB being attribute2 over categoryA being attribute2.',
+			fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
+			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
+			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
 			fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
 
 			//Error messages in the feedback
@@ -336,7 +338,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		};
 
 		// extend the "current" object with the default
-		_.defaults(piCurrent, options, iatObj);
+		_.extend(piCurrent, _.defaults(options, iatObj));
 		_.extend(API.script.settings, options.settings);
 
         /**
@@ -368,15 +370,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                 for (iLog = 0; iLog < logs.length; iLog++)
                 {
                     if(!hasProperties(logs[iLog], ['trial_id', 'name', 'responseHandle', 'stimuli', 'media', 'latency'])){
-                        //console.log('---MISSING PROPERTIY---');
-                        //console.log(logs[iLog]);
-                        //console.log('---MISSING PROPERTIY---');
+                        // console.log('---MISSING PROPERTIY---');
+                        // console.log(logs[iLog]);
+                        // console.log('---MISSING PROPERTIY---');
                     }
                     else if(!hasProperties(logs[iLog].data, ['block', 'condition', 'score', 'cong']))
                     {
-                        //console.log('---MISSING data PROPERTIY---');
-                        //console.log(logs[iLog].data);
-                        //console.log('---MISSING data PROPERTIY---');
+                        // console.log('---MISSING data PROPERTIY---');
+                        // console.log(logs[iLog].data);
+                        // console.log('---MISSING data PROPERTIY---');
                     }
                     else
                     {
@@ -427,7 +429,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     {
                         if (!obj.hasOwnProperty(props[iProp]))
                         {
-                            //console.log('missing ' + props[iProp]);
+                           // console.log('missing ' + props[iProp]);
                             return false;
                         }
                     }
@@ -450,7 +452,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 		// are we on the touch version
 		var isTouch = piCurrent.isTouch;
-
+		var showDebriefing = piCurrent.showDebriefing;
+		var fullscreen = piCurrent.fullscreen;
 		//We use these objects a lot, so let's read them here
 		var att1 = piCurrent.attribute1;
 		var att2 = piCurrent.attribute2;
@@ -468,6 +471,16 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			att2.stimulusCss.maxHeight = maxH;
 			cat1.stimulusCss.maxHeight = maxH;
 			cat2.stimulusCss.maxHeight = maxH;
+		}
+		if(fullscreen){
+			var el = document.documentElement;
+			var rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			if (rfs) rfs.call(el);
+			else if(window.ActiveXObject){
+		// for Internet Explorer
+			var wscript = new window.ActiveXObject('WScript.Shell');
+			if (wscript!=null) wscript.SendKeys('{F11}');
+			}
 		}
 
 		//Set the attribute on the left.
@@ -488,15 +501,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		API.addSettings('base_url',piCurrent.base_url);
 		API.addSettings('hooks',{
 				endTask: function(){
-					//console.log('compute score');
-					var DScoreObj = scorer.computeD();
-					piCurrent.feedback = DScoreObj.FBMsg;
-					piCurrent.d = DScoreObj.DScore; //YBYB: Added on 28March2017
-					//console.log('score computed, d='+piCurrent.d + " fb=" + piCurrent.feedback);
-					//YBYB: API.save will not work in qualtrics
-					//API.save({block3Cond:block3Cond, feedback:DScoreObj.FBMsg, d: DScoreObj.DScore});
-					//Perhaps we need to add this to support Qualtrics
-					window.minnoJS.onEnd();
+                    window.minnoJS.onEnd();
 				}
 			});
 		/**
@@ -1147,7 +1152,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				nTrialsInMini : nTrialsInMini, currentCond : blockCondition, cong:isCompatible, 
 				rightTrial1 : rightAttTrial, leftTrial1 : leftAttTrial,
 				rightTrial2 : rightCatTrial, leftTrial2 : leftCatTrial,
-				blockNum : iBlock, blockLayout : blockLayout, parcel:'second'}));
+				blockNum : iBlock, blockLayout : blockLayout, parcel:'first'}));
 			}
 		    iBlock++;
 		}
@@ -1245,9 +1250,75 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				nTrialsInMini : nTrialsInMini, currentCond : blockCondition, cong:isCompatible, 
 				rightTrial1 : rightAttTrial, leftTrial1 : leftAttTrial,
 				rightTrial2 : rightCatTrial, leftTrial2 : leftCatTrial,
-				blockNum : iBlock, blockLayout : blockLayout, parcel:'second'}));
+				blockNum : iBlock, blockLayout : blockLayout, parcel:'first'}));
 			}
+        }
+
+		//////// in this trial the score of the participant is computed//////////////////
+
+		trialSequence.push({
+			data: {blockStart:true},
+			layout : [{media:{word:''}}],
+			customize : function(element, global){
+				var DScoreObj = scorer.computeD();
+				piCurrent.feedback = DScoreObj.FBMsg;
+				piCurrent.d = DScoreObj.DScore;
+			},
+
+			interactions: [{
+				conditions: [{type:'begin'}],
+				actions: [{type: 'endTrial'}]
+			}]
+		});
+        
+        //if showDebriefing==True, we will show the feedback to the user
+        if(showDebriefing){
+            //////////////////////////////
+            //Add pre-Page before the debriefing is shown
+            trialSequence.push({
+                inherit : 'instructions',
+                data: {blockStart:true},
+                layout : [{media:{word:''}}],
+                stimuli : [
+                    {
+                        inherit : 'Default',
+                        media : {word : (isTouch ? piCurrent.preDebriefingTouchText : piCurrent.preDebriefingText)}
+                    }
+                ]
+            });
+            
+            /////////////////////////////
+            //add debriefing trial, the feedback will be shown with text above and under ther result.
+            trialSequence.push({
+                inherit:'instructions',
+                data: {blockStart:true},
+               
+                //the feedback massege will be shown to the user at the center of the screen
+                stimuli: [
+                    
+                {
+					inherit : 'Default',
+                    media : {word : (piCurrent.debriefingTextTop)},
+                    location:{left:2,top:15,right:2},
+                },
+                {
+                    inherit: 'Default',
+                    media :{word: ('<%=current.feedback%>') },
+                    location:{left:2,top:30,right:2}
+                },
+                {
+					inherit : 'Default',
+                    media : {word : (isTouch ? piCurrent.debriefingTextBottomTouch:piCurrent.debriefingTextBottom)},
+                    location:{left:2,top:45,right:2}
+                }
+             
+                
+                
+            ],
+				   
+            });	
 		}
+			
 		//////////////////////////////
 		//Add final trial
 		trialSequence.push({
@@ -1260,7 +1331,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					media : {word : (isTouch ? piCurrent.finalTouchText : piCurrent.finalText)}
 				}
 			]
-		});
+        });
 
 		//Add the trials sequence to the API.
 		API.addSequence(trialSequence);
@@ -1278,7 +1349,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//condition 2
 			cond2VarValues: [INCOMPATIBLE],
 			parcelVar : "parcel", 
-			parcelValue : ['second', 'first'],
+			parcelValue : ['first'],
 			fastRT : 150, //Below this reaction time, the latency is considered extremely fast.
 			maxFastTrialsRate : 0.1, //Above this % of extremely fast responses within a condition, the participant is considered too fast.
 			minRT : 400, //Below this latency
@@ -1320,12 +1391,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		{
 			scoreMessageObject.notEnough = piCurrent.notEnough;
 		}
-		// Set messages to the scorer.
-		scorer.addSettings('message', scoreMessageObject);
+		//Set messages to the scorer.
+		scorer.addSettings('message',scoreMessageObject);
 
 		return API.script;
 	}
-	
+
 	return iatExtension;
 });
-
