@@ -142,12 +142,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			remindError : true,
 
 			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
-			'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> દેખાશે. ' +
-			'ચાલુ રાખવા માટે અન્ય કી દબાવો.<p/>',
+'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> દેખાશે. ' +
+'ચાલુ રાખવા માટે અન્ય કી દબાવો.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
-			'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> દેખાશે. ' +
-			'ચાલુ રાખવા માટે અન્ય બાજુને ટચ કરો.<p/>',
+'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> દેખાશે. ' +
+'ચાલુ રાખવા માટે અન્ય બાજુને ટચ કરો.<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
@@ -209,7 +209,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'કેટેગરીને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>. ' +
 				'<br/> કેટેગરીને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો <font color="#336600">rightCategory</font>.<br/>' +
 				'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/><br/>' +
-				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો.<br/>' +
+				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે.’ +  ‘અન્ય બાજુને/સાઈડને સ્પર્શ કરો.<br/>' +
 				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>'+
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instCategoriesPracticeTouch: [
@@ -232,11 +232,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				' <font color="#336600">leftCategory</font> માટે અને <font color="#0000ff">leftAttribute</font>.<br/>' માટે <b>E</b> કી નો ઉપયોગ કરો +
-				' <font color="#336600">rightCategory</font> માટે અને  <font color="#0000ff">rightAttribute</font>.<br/>' માટે <b>I</b> કી નો ઉપયોગ કરો +
+				' માટે <b>E</b> <font color="#336600">leftCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">leftAttribute</font>.<br/>' 
+				' માટે <b>I</b> <font color="#336600">rightCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">rightAttribute</font>.<br/>' 
 				'દરેક વસ્તુ ફક્ત એક કેટેગરીની છે.<br/><br/>' +
-				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. 
-અન્ય બાજુને/સાઈડને સ્પર્શ કરો.<br/>' + 
+				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે.’ + 
+ ‘અન્ય બાજુને/સાઈડને સ્પર્શ કરો.<br/>' + 
 				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>' +
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instFirstCombinedTouch:[
@@ -247,8 +247,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						'<font color="#336600">leftCategory</font> વસ્તુ માટે અને <font color="#0000ff">leftAttribute</font>.</br>' માટે <b>ડાબા</b> ગ્રીન/લીલા વિસ્તાર પર ડાબી આંગળી મુકો,
-						' <font color="#336600">rightCategory</font> વસ્તુ માટે અને  <font color="#0000ff">rightAttribute</font>.</br>' માટે <b>જમણા</b> ગ્રીન/લીલા વિસ્તાર પર જમણી આંગળી મુકો,
+												' આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન <font color="#336600">leftCategory</font>  વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+							' આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન <font color="#336600">rightCategory</font>  વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
 							' જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.</br>',
 						'</p>',
 						'<p align="center">શરુ કરવા માટે <b>નીચેના </b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
@@ -259,8 +259,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'આ પહેલાના પાર્ટ/ભાગ જેવુજ છે.<br/>' +
-				'<font color="#336600">leftCategory</font> માટે અને<font color="#0000ff">leftAttribute</font>.<br/>' માટે <b>E</b> કી નો ઉપયોગ કરો +
-				'<font color="#336600">rightCategory</font> માટે અને  <font color="#0000ff">rightAttribute</font>.<br/>' માટે <b>I</b> કી નો ઉપયોગ કરો +
+' માટે <b>E</b> <font color="#336600">leftCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">leftAttribute</font>.<br/>' 
+				' માટે <b>I</b> <font color="#336600">rightCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">rightAttribute</font>.<br/>' 
+
 				'દરેક વસ્તુ ફક્ત એક કેટેગરીની છે.<br/><br/>' +
 				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>' +
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
@@ -271,8 +272,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						' <font color="#336600">leftCategory</font> આઈટમસ માટે અને <font color="#0000ff">leftAttribute</font>.<br/>' માટે <b>ડાબા</b> ગ્રીન/લીલા વિસ્તાર પર ડાબી આંગળી મુકો,
-						'<font color="#336600">rightCategory</font> આઈટમસ માટે અને <font color="#0000ff">rightAttribute</font>.<br/>' માટે <b>જમણા</b> ગ્રીન/લીલા વિસ્તાર પર જમણી આંગળી મુકો,
+												' આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન <font color="#336600">leftCategory</font>  વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+							' આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન <font color="#336600">rightCategory</font>  વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
 						'<br/>',
 						'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/>',
 					'</p>',
@@ -284,8 +285,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'<b>ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!</b><br/>' +
-				'<font color="#336600">leftCategory</font>.<br/>' માટે <b>E</b> કી માટે ડાબી આંગળી મુકો +
-				'P<font color="#336600">rightCategory</font>.<br/><br/>' માટે <b>I</b> કી માટે જમણી આંગળી મુકો +
+				' માટે <b>E</b> કી માટે ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>.<br/>' 
+				' માટે <b>I</b> કી માટે જમણી આંગળી મુકો <font color="#336600">rightCategory</font>.<br/><br/>' 
 				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>' +
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instSwitchCategoriesTouch: [
@@ -296,8 +297,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
 						' ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!<br/>',
-							'<font color="#336600">leftCategory</font> આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
-							'<font color="#336600">rightCategory</font> આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
+							' આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન <font color="#336600">leftCategory</font>  વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+							' આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન <font color="#336600">rightCategory</font>  વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
 							' આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.',
 							'<br/>',
 							'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/>',
