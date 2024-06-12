@@ -177,135 +177,95 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			// the name of the categories and the block's number variables:
 			// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
 			// Notice that this is HTML text.
-			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b>E</b> बटणावर डावे बोट ठेवा <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b> I</b> बटणावर उजवे बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
-				'सुरु ठेवण्यासाठी दुसरे बटन दाबा.<br/>' +
-				'<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>'+
-				'<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b>  दाबा.</font></p></div>',
-			instAttributePracticeTouch: [
-				'<div>',
-					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
-					'</p>',
-					'<p align="left" style="margin-left:5px">',
-						'<br/>',
-						'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b>डावीकडील</b>  हिरव्या भागावर डावे बोट ठेवा <font color="#0000ff">leftAttribute</font>.<br/>',
-						'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b> उजवीकडील</b> हिरव्या भागावर उजवे बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/>',
-						'एक एक करून वस्तू दिसू लागतील.<br/>',
-						'<br/>',
-						'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.',
-					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
-				'</div>'
-			].join('\n'),
+instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
+    '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+    '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
+    'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>E</b> बटणावर डावे बोट ठेवा <font color="#0000ff">leftAttribute</font>.' +
+    '<br/>कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>I</b> बटणावर उजवे बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+    'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
+    'सुरु ठेवण्यासाठी दुसरे बटन दाबा.<br/>' +
+    '<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>' +
+    '<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
 
-			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b>E</b> बटणावर डावे बोट ठेवा <font color="#336600">leftCategory</font>. ' +
-				'<br/>कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b> I</b> बटणावर उजवे बोट ठेवा <font color="#336600">rightCategory</font>.<br/>' +
-				'एक एक करून वस्तू दिसू लागतील.<br/><br/>' +
-				'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
-				'सुरु ठेवण्यासाठी दुसरे बटन दाबा.<br/>' +
-				'<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>'+
-				'<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b>  दाबा.</font></p></div>',
-			instCategoriesPracticeTouch: [
-				'<div>',
-					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
-					'</p>',
-					'<p align="left" style="margin-left:5px">',
-						'<br/>',
-						'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b>डावीकडील</b>  हिरव्या भागावर डावे बोट ठेवा <font color="#336600">leftCategory</font>.<br/>',
-						'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b> उजवीकडील</b> हिरव्या भागावर उजवे बोट ठेवा <font color="#336600">rightCategory</font>.<br/>',
-						'एक एक करून वस्तू दिसू लागतील.<br/>',
-						'<br/>',
-						'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.', 
-					'</p>',
-					'<p align="center">सुरु करण्यासाठी <b>खालील </b> हिरव्या भागावर टच करा.</p>',
-				'</div>'
-			].join('\n'),
+instAttributePracticeTouch: [
+    '<div>',
+        '<p align="center">',
+            '<u>Part blockNum of nBlocks</u>',
+        '</p>',
+        '<p align="left" style="margin-left:5px">',
+            '<br/>',
+            'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>डावीकडील</b> हिरव्या भागावर डावे बोट ठेवा <font color="#0000ff">leftAttribute</font>.<br/>',
+            'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>उजवीकडील</b> हिरव्या भागावर उजवे बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/>',
+            'एक एक करून वस्तू दिसू लागतील.<br/>',
+            '<br/>',
+            'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.',
+        '</p>',
+        '<p align="center">Touch the <b>lower</b> green area to start.</p>',
+    '</div>'
+].join('\n'),
 
-			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी  <b>E</b>  बटण वापरा.<br/>' +
-				'<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उजव्या विशेषते</font>साठी  <b>I</b>  बटण वापरा.<br/>' +
-				'प्रत्येक वस्तू फक्त एकाच कॅटेगरीशी संबंधित आहे.<br/><br/>' +
-				'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
-				'सुरु ठेवण्यासाठी दुसरे बटन दाबा.<br/>' + 
-				'<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>'+
-				'<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b>  दाबा.</font></p></div>',
-			instFirstCombinedTouch:[
-				'<div>',
-					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
-					'</p>',
-					'<br/>',
-					'<br/>',
-					'<p align="left" style="margin-left:5px">',
-						'<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी  <b>डाव्या</b> हिरव्या भागावर डावे बोट ठेवा.<br/>'
-						'<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उजव्या विशेषते</font>साठी  <b>उजव्या</b> हिरव्या भागावर डावे बोट ठेवा.<br/>'
-							'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.</br>',
-						'</p>',
-						'<p align="center">सुरु करण्यासाठी <b>खालील </b> हिरव्या भागावर टच करा.</p>',
-				'</div>'
-			].join('\n'),
+instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
+    '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+    '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
+    'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>E</b> बटणावर डावे बोट ठेवा <font color="#336600">leftCategory</font>.' +
+    '<br/>कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>I</b> बटणावर उजवे बोट ठेवा <font color="#336600">rightCategory</font>.<br/>' +
+    'एक एक करून वस्तू दिसू लागतील.<br/><br/>' +
+    'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
+    'सुरु ठेवण्यासाठी दुसरे बटन दाबा.<br/>' +
+    '<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>' +
+    '<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
 
-			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'हे मागील भागाच्या सारखेच आहे.<br/>' +
-				'<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी  <b>E</b>  बटण वापरा.<br/>' +
-				'<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उजव्या विशेषते</font>साठी  <b>I</b>  बटण वापरा.<br/>'+ 
-				'प्रत्येक वस्तू फक्त एकाच कॅटेगरीशी संबंधित आहे.<br/><br/>' +
-				'<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>'+
-				'<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b>  दाबा.</font></p></div>',
-			instSecondCombinedTouch:[
-				'<div>',
-					'<p align="center"><u>Part blockNum of nBlocks</u></p>',
-					'<br/>',
-					'<br/>',
+instCategoriesPracticeTouch: [
+    '<div>',
+        '<p align="center">',
+            '<u>Part blockNum of nBlocks</u>',
+        '</p>',
+        '<p align="left" style="margin-left:5px">',
+            '<br/>',
+            'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>डावीकडील</b> हिरव्या भागावर डावे बोट ठेवा <font color="#336600">leftCategory</font>.<br/>',
+            'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>उजवीकडील</b> हिरव्या भागावर उजवे बोट ठेवा <font color="#336600">rightCategory</font>.<br/>',
+            'एक एक करून वस्तू दिसू लागतील.<br/>',
+            '<br/>',
+            'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.',
+        '</p>',
+        '<p align="center">सुरु करण्यासाठी <b>खालील</b> हिरव्या भागावर टच करा.</p>',
+    '</div>'
+].join('\n'),
 
-					'<p align="left" style="margin-left:5px">',
-						'<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी  <b>डाव्या</b> हिरव्या भागावर डावे बोट ठेवा.<br/>'
-						'<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उजव्या विशेषते</font>साठी   <b>उजव्या</b>  हिरव्या भागावर डावे बोट ठेवा.<br/>'
-						'<br/>',
-						'<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.</br>',
-					'</p>',
-					'<p align="center">सुरु करण्यासाठी <b>खालील </b> हिरव्या भागावर टच करा.</p>',
-				'</div>'
-			].join('\n'),
+instFirstCombined: '<div><p align="center" style="font-size:20px; font-family:arial">' +
+    '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+    '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
+    '<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी <b>E</b> बटण वापरा.<br/>' +
+    '<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उजव्या विशेषते</font>साठी <b>I</b> बटण वापरा.<br/>' +
+    'प्रत्येक वस्तू फक्त एकाच कॅटेगरीशी संबंधित आहे.<br/><br/>' +
+    'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
+    'सुरु ठेवण्यासाठी दुसरे बटन दाबा.<br/>' +
+    '<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>' +
+    '<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
 
-			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b>नीट पहा, लेबल्सची स्थिती बदललेली आहे!</b><br/>' +
-				'<font color="#336600">डाव्या कॅटेगरी</font> साठी <b>E</b> बटणावर डावे बोट ठेवा.<br/>' +
-				'<font color="#336600">उजव्या कॅटेगरी</font> साठी <b> I</b> बटणावर उजवे बोट ठेवा.<br/><br/>' +
-				'<u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/><br/></p>'+
-				'<p align="center">तुम्ही सुरु करण्यासाठी तयार असाल तेव्हा <b>स्पेस बार</b>  दाबा.</font></p></div>',
-			instSwitchCategoriesTouch: [
-				'<div>',
-					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
-					'</p>',
-					'<p align="left" style="margin-left:5px">',
-						'<br/>',
-						'नीट पहा, लेबल्सची स्थिती बदललेली आहे!<br/>',
-							'<font color="#336600">डाव्या कॅटेगरीतील</font> वस्तूंसाठी  <b>डावीकडील</b>  हिरव्या भागावर डावे बोट ठेवा.<br/>',
-							'<font color="#336600">उजव्या कॅटेगरीतील</font> वस्तूंसाठी  <b>उजवीकडील</b>  हिरव्या भागावर डावे बोट ठेवा.<br/>',
-							'एक एक करून वस्तू दिसू लागतील.',
-							'<br/>',
-							'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/>',
-						'</p>',
-						'<p align="center">सुरु करण्यासाठी <b>खालील </b> हिरव्या भागावर टच करा.</p>',
-				'</div>'
-			].join('\n'),
+instFirstCombinedTouch: [
+    '<div>',
+        '<p align="center">',
+            '<u>Part blockNum of nBlocks</u>',
+        '</p>',
+        '<br/>',
+        '<br/>',
+        '<p align="left" style="margin-left:5px">',
+            '<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी <b>डाव्या</b> हिरव्या भागावर डावे बोट ठेवा.<br/>',
+            '<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उजव्या विशेषते</font>साठी <b>उजव्या</b> हिरव्या भागावर डावे बोट ठेवा.<br/>',
+            'जर तुम्ही एखादी चूक करता, तर एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u>जमेल तितके पटापट जा</u> आणि अचूक रहा.<br/>',
+        '</p>',
+        '<p align="center">सुरु करण्यासाठी <b>खालील</b> हिरव्या भागावर टच करा.</p>',
+    '</div>'
+].join('\n'),
+
+instSecondCombined: '<div><p align="center" style="font-size:20px; font-family:arial">' +
+    '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+    '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
+    'हे मागील भागाच्या सारखेच आहे.<br/>' +
+    '<font color="#336600">डाव्या कॅटेगरी</font> आणि <font color="#0000ff">डाव्या विशेषते</font>साठी <b>E</b> बटण वापरा.<br/>' +
+    '<font color="#336600">उजव्या कॅटेगरी</font> आणि <font color="#0000ff">उ
+
 
 			instThirdCombined : 'instFirstCombined', //this means that we're going to use the instFirstCombined property for the third combined block as well. You can change that.
 			instFourthCombined : 'instSecondCombined', //this means that we're going to use the instSecondCombined property for the fourth combined block as well. You can change that.
