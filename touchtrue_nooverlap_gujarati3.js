@@ -142,12 +142,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			remindError : true,
 
 			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
-'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> દેખાશે. ' +
-'ચાલુ રાખવા માટે અન્ય કી દબાવો.<p/>',
+			'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.' +
+			'ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
-'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> દેખાશે. ' +
-'ચાલુ રાખવા માટે અન્ય બાજુને ટચ કરો.<p/>',
+			'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.' +
+			'ચાલુ રાખવા માટે અન્ય કી ને દબાવો .<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
@@ -166,7 +166,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instWidth : 99, //The width of the instructions stimulus
             
 			finalText : 'બીજા ટાસ્ક/કાર્યને ચાલુ રાખવા માટે સ્પેસ દબાવો', 
-			finalTouchText : 'આગળનું ટાસ્ક/કાર્ય ચાલુ રાખવા માટે નીચેના ગ્રીન/લીલા વિસ્તારને સ્પર્શ કરો',
+			finalTouchText : 'બીજા ટાસ્ક/કાર્યને ચાલુ રાખવા માટે નીચેના લીલા/ગ્રીન વિસ્તાર પર સ્પર્શ કરો.',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -180,12 +180,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'કેટેગરીને લગતી વસ્તુઓ માટે <b>E</b> કી પર ડાબી આંગળી મુકો <font color="#0000ff">leftAttribute.</font>' +
-				'<br/> કેટેગરીને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. ' +
+				' કેટેગરી<font color="#0000ff">leftAttribute</font> ને લગતી વસ્તુઓ માટે <b>E</b> કી પર ડાબી આંગળી મુકો.' +
+				'<br/>કેટેગરી <font color="#0000ff">rightAttribute</font> ને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો.<br/><br/>' +
+				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.' +
 				'ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<br/>' +
 				'<u>તમે કરી શકો તેટલા ઝડપથી જાઓ</u> સચોટ હોવા છતાં પણ.<br/><br/></p>'+
-				'<p align="center">જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
+				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -193,24 +193,25 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'કેટેગરીને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો <font color="#0000ff">leftAttribute</font>.<br/>',
-						'કેટેગરીને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર જમણી આંગળી મુકો <font color="#0000ff">rightAttribute</font>.<br/>',
-						'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/>',
+						'કેટેગરી <font color="#0000ff">leftAttribute</font> ને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+						' કટેગરી <font color="#0000ff">rightAttribute</font> ને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+						‘આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/>',
 						'<br/>',
-						'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u>તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.',
+						‘જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u>તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">શરુ કરવા માટે <b>નીચેના</b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
 			].join('\n'),
 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'કેટેગરીને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>. ' +
-				'<br/> કેટેગરીને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો <font color="#336600">rightCategory</font>.<br/>' +
+				'કેટેગરી< font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>E</b> કી પર ડાબી આંગળી મુકો.' +
+				'<br/>કેટેગરી <font color="#336600">rightCategory</font>  ને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો.<br/>' +
 				'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/><br/>' +
-				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે.’ +  ‘અન્ય બાજુને/સાઈડને સ્પર્શ કરો.<br/>' +
-				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>'+
+				‘જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.’ +
+				'ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<br/>' +
+				'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/><br/></p>'+
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
@@ -219,25 +220,27 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'કેટેગરીને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>.<br/>',
-						'કેટેગરીને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર જમણી આંગળી મુકો <font color="#336600">rightCategory</font>.<br/>',
+						'કેટેગરી <font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+						'કટેગરી <font color="#336600">rightCategory</font> ને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>.<br/>',
 						'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/>',
 						'<br/>',
-						'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u>તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.',
+						'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.',
 					'</p>',
-					'<p align="center">શરુ કરવા માટે <b>નીચેના </b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
+					'<p align="center"> શરુ કરવા માટે <b>નીચેના</b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
 			].join('\n'),
 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				' માટે <b>E</b> <font color="#336600">leftCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">leftAttribute</font>.<br/>' 
-				' માટે <b>I</b> <font color="#336600">rightCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">rightAttribute</font>.<br/>' 
+				'માટે <b>E</b> કી નો ઉપયોગ કરો <font color="#336600">leftCategory</font> અને માટે
+<font color="#0000ff">leftAttribute</font>.<br/>' +
+				‘માટે <b>I</b> કી નો ઉપયોગ કરો <font color="#336600">rightCategory</font> અને માટે
+<font color="#0000ff">rightAttribute</font>.<br/>' +
 				'દરેક વસ્તુ ફક્ત એક કેટેગરીની છે.<br/><br/>' +
-				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે.’ + 
- ‘અન્ય બાજુને/સાઈડને સ્પર્શ કરો.<br/>' + 
-				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>' +
+				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. ' +
+				' ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<br/>' + 
+				'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/><br/></p>' +
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instFirstCombinedTouch:[
 				'<div>',
@@ -247,23 +250,25 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-												' આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન <font color="#336600">leftCategory</font>  વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
-							' આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન <font color="#336600">rightCategory</font>  વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
-							' જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.</br>',
+						'કેટેગરી <font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો અને માટે <font color="#0000ff">leftAttribute</font>.</br>',
+						'કેટેગરી <font color="#336600">rightCategory</font> ને લગતી વસ્તુઓ માટે જમણા લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો અને માટે
+<font color="#0000ff">rightAttribute</font>.</br>',
+							'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.</br>',
 						'</p>',
-						'<p align="center">શરુ કરવા માટે <b>નીચેના </b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
+						'<p align="center">શરુ કરવા માટે <b>નીચેના</b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
 			].join('\n'),
 
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'આ પહેલાના પાર્ટ/ભાગ જેવુજ છે.<br/>' +
-' માટે <b>E</b> <font color="#336600">leftCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">leftAttribute</font>.<br/>' 
-				' માટે <b>I</b> <font color="#336600">rightCategory</font> માટે અને કી નો ઉપયોગ કરો <font color="#0000ff">rightAttribute</font>.<br/>' 
-
+				' આ પહેલાના ભાગ જેવુજ છે.<br/>' +
+				'માટે <b>E</b> કી નો ઉપયોગ કરો<font color="#336600">leftCategory</font> અને માટે
+ <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'માટે <b>I</b> કી નો ઉપયોગ કરો <font color="#336600">rightCategory</font> અને માટે
+ <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'દરેક વસ્તુ ફક્ત એક કેટેગરીની છે.<br/><br/>' +
-				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>' +
+				'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/><br/></p>' +
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
@@ -272,22 +277,23 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-												' આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન <font color="#336600">leftCategory</font>  વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
-							' આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન <font color="#336600">rightCategory</font>  વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
+						'કેટેગરી <font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો અને માટે <font color="#0000ff">leftAttribute</font>.<br/>',
+						' કેટેગરી <font color="#336600">rightCategory</font> ને લગતી વસ્તુઓ માટે જમણા લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો અને માટે
+<font color="#0000ff">rightAttribute</font>.<br/>',
 						'<br/>',
-						'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/>',
+						'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/>',
 					'</p>',
-					'<p align="center">શરુ કરવા માટે <b>નીચેના </b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
+					'<p align="center"> શરુ કરવા માટે <b>નીચેના</b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
 			].join('\n'),
 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b>ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!</b><br/>' +
-				' માટે <b>E</b> કી માટે ડાબી આંગળી મુકો <font color="#336600">leftCategory</font>.<br/>' 
-				' માટે <b>I</b> કી માટે જમણી આંગળી મુકો <font color="#336600">rightCategory</font>.<br/><br/>' 
-				'<u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/><br/></p>' +
+				'<b> ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!</b><br/>' +
+				'કેટેગરી<font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>E</b> કી પર ડાબી આંગળી મુકો.' +
+				'કેટેગરી <font color="#336600">rightCategory</font>  ને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો.<br/><br/>' +
+				'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/><br/></p>' +
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
 			instSwitchCategoriesTouch: [
 				'<div>',
@@ -296,14 +302,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						' ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!<br/>',
-							' આઈટમ્સ/વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન <font color="#336600">leftCategory</font>  વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
-							' આઈટમ્સ/વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન <font color="#336600">rightCategory</font>  વિસ્તાર પર જમણી આંગળી મુકો .<br/>',
-							' આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.',
+						'ધ્યાન રાખો, લેબલોની સ્થિતિ બદલાઈ ગઈ છે!<br/>',
+							'કેટેગરી <font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+							'કટેગરી <font color="#336600">rightCategory</font> ને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
+							'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.',
 							'<br/>',
-							'જો તમે ભૂલ કરો છો, તો લાલ/રેડ <font color="#ff0000"><b>X</b></font> આવશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલી ઝડપથી જાઓ</u> સચોટ હોવા છતાંપણ.<br/>',
+							'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/>',
 						'</p>',
-						'<p align="center"> શરુ કરવા માટે <b>નીચેના </b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
+						'<p align="center"> શરુ કરવા માટે <b>નીચેના</b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
 			].join('\n'),
 
@@ -314,27 +320,27 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 			showDebriefing:false, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
 			//Texts for the trials that show the debriefing.
-			preDebriefingText : 'તમારું રીઝલ્ટ/પરિણામ જોવા માટે સ્પેસ દબાવો', //Text in the trial that comes before showing the debriefing.
-			preDebriefingTouchText : 'તમારું રીઝલ્ટ/પરિણામ જોવા માટે નીચેના લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો', //Touch version for the text in the trial that comes before showing the debriefing.
-			debriefingTextTop : 'તમારું રીઝલ્ટ/પરિણામ', //Will be shown above the feedback text.
+			preDebriefingText : 'Press space to see your result', //Text in the trial that comes before showing the debriefing.
+			preDebriefingTouchText : 'Touch the bottom green area to see your result', //Touch version for the text in the trial that comes before showing the debriefing.
+			debriefingTextTop : 'Your result:', //Will be shown above the feedback text.
 			//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
-			//In Project Implicit's websiteu can see that we added much text to explain that there is still much unknown about the meaning of these results.
+			//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
 			//We strongly recommend that you provide all these details in the debriefing of the experiment.
-			debriefingTextBottom : 'આ રીઝલ્ટ/પરિણામ તમારી વર્તણુકનું ચોક્કસ મુલ્યાંકન નથી, તે ફક્ત શૈક્ષણિક હેતુઓ માટે પૂરું પાડવામાં આવ્યું છે. ચાલુ રાખવા માટે સ્પેસ દબાવો.', //Will be shown below the feedback text. 
-            debriefingTextBottomTouch : 'આ રીઝલ્ટ/પરિણામ તમારી વર્તણુકનું ચોક્કસ મુલ્યાંકન નથી, તે ફક્ત શૈક્ષણિક હેતુઓ માટે પૂરું પાડવામાં આવ્યું છે.  ચાલુ રાખવા માટે લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.',
+			debriefingTextBottom : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.  Press space to continue.', //Will be shown below the feedback text. 
+            debriefingTextBottomTouch : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.  Touch the green area to continue.',
 			//The default feedback messages for each cutoff -
 			//attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
 			//categoryA is the name of the category that is found to be associated with attribute1,
 			//and categoryB is the name of the category that is found to be associated with attribute2.
-			fb_strong_Att1WithCatA_Att2WithCatB : ' તમારા જવાબોએ categoryA પર categoryB માટે મજબુત ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.’,
-			fb_moderate_Att1WithCatA_Att2WithCatB : ' તમારા જવાબોએ categoryA પર categoryB માટે મધ્યમ ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.',
-			fb_slight_Att1WithCatA_Att2WithCatB : ' તમારા જવાબોએ categoryA પર categoryB માટે સહેજ ઓટોમેટીક પસંદગીનું સૂચન કર્યું છે.',
-			fb_equal_CatAvsCatB : ' તમારા જવાબોએ categoryA અને categoryB વચ્ચે કોઈ ઓટોમેટીક પસંદગીનું સૂચન કર્યું નથી.',
+			fb_strong_Att1WithCatA_Att2WithCatB : 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
+			fb_moderate_Att1WithCatA_Att2WithCatB : 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
+			fb_slight_Att1WithCatA_Att2WithCatB : 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
+			fb_equal_CatAvsCatB : 'Your responses suggested no automatic preference between categoryA and categoryB.',
 
 			//Error messages in the feedback
-			manyErrors: ' પરિણામ/રીઝલ્ટ નક્કી કરવામાં ઘણી બધી ભૂલો કરવામાં આવી હતી.',
-			tooFast: ' પરિણામ/રીઝલ્ટ નક્કી કરવા માટે ઘણા ઝડપી ટ્રાયલ્સ હતા.',
-			notEnough: ' પરિણામ/રીઝલ્ટ નક્કી કરવા માટે પૂરતા ટ્રાયલ્સ ન હતા.'
+			manyErrors: 'There were too many errors made to determine a result.',
+			tooFast: 'There were too many fast trials to determine a result.',
+			notEnough: 'There were not enough trials to determine a result.'
 		};
 
 		// extend the "current" object with the default
