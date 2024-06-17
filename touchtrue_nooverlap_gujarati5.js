@@ -141,11 +141,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Show a reminder what to do on error, throughout the task
 			remindError : true,
 
-			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
+			remindErrorText : '<p align="center" style="font-size:0.6em; font-family:arial">' +
 			'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.' +
 			'ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<p/>',
 
-			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
+			remindErrorTextTouch : '<p align="center" style="font-size:1.4em; font-family:arial">' +
 			'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.' +
 			'ચાલુ રાખવા માટે અન્ય કી ને દબાવો .<p/>',
 
@@ -209,7 +209,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'કેટેગરી< font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>E</b> કી પર ડાબી આંગળી મુકો.' +
 				'<br/>કેટેગરી <font color="#336600">rightCategory</font>  ને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો.<br/>' +
 				'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/><br/>' +
-				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.’ +
+				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. ' +
 				'ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<br/>' +
 				'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/><br/></p>'+
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
