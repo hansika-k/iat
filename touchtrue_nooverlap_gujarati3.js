@@ -195,9 +195,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 						'<br/>',
 						'કેટેગરી <font color="#0000ff">leftAttribute</font> ને લગતી વસ્તુઓ માટે <b>ડાબા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
 						' કટેગરી <font color="#0000ff">rightAttribute</font> ને લગતી વસ્તુઓ માટે <b>જમણા</b> લીલા/ગ્રીન વિસ્તાર પર ડાબી આંગળી મુકો.<br/>',
-						‘આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/>',
+						'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/>',
 						'<br/>',
-						‘જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u>તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.',
+						'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. અન્ય બાજુને/સાઈડને સ્પર્શ કરો. <u>તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.',
 					'</p>',
 					'<p align="center">શરુ કરવા માટે <b>નીચેના</b> લીલા/ગ્રીન વિસ્તારને સ્પર્શ કરો.</p>',
 				'</div>'
@@ -209,7 +209,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'કેટેગરી< font color="#336600">leftCategory</font> ને લગતી વસ્તુઓ માટે <b>E</b> કી પર ડાબી આંગળી મુકો.' +
 				'<br/>કેટેગરી <font color="#336600">rightCategory</font>  ને લગતી વસ્તુઓ માટે <b>I</b> કી પર જમણી આંગળી મુકો.<br/>' +
 				'આઈટમ્સ/વસ્તુઓ એક સમયે એક દેખાશે.<br/><br/>' +
-				‘જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.’ +
+				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે.’ +
 				'ચાલુ રાખવા માટે અન્ય કી ને દબાવો.<br/>' +
 				'<u> તમે કરી શકો તેટલા ઝડપથી જાઓ </u> સચોટ હોવા છતાં પણ.<br/><br/></p>'+
 				'<p align="center"> જ્યારે તમે શરુ કરવા માટે તૈયાર હોવ ત્યારે <b>સ્પેસ બાર</b> દબાવો.</font></p></div>',
@@ -235,7 +235,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'માટે <b>E</b> કી નો ઉપયોગ કરો <font color="#336600">leftCategory</font> અને માટે
 <font color="#0000ff">leftAttribute</font>.<br/>' +
-				‘માટે <b>I</b> કી નો ઉપયોગ કરો <font color="#336600">rightCategory</font> અને માટે
+				'માટે <b>I</b> કી નો ઉપયોગ કરો <font color="#336600">rightCategory</font> અને માટે
 <font color="#0000ff">rightAttribute</font>.<br/>' +
 				'દરેક વસ્તુ ફક્ત એક કેટેગરીની છે.<br/><br/>' +
 				'જો તમે ભૂલ કરો છો, તો લાલ/રેડ<font color="#ff0000"><b>X</b></font> દેખાશે. ' +
