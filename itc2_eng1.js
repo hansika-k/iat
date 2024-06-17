@@ -4,9 +4,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 	return iatExtension({
 
 		category1 : {
-			name : 'Packaged', //Will appear in the data.
+			name : 'Branded', //Will appear in the data.
 			title : {
-				media : {word : 'Packaged'}, //Name of the category presented in the task.
+				media : {word : 'Branded'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
@@ -50,7 +50,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				{word: 'fresh'},
 				{word: 'beneficial'},
 				{word: 'organic'},
-				{word: 'strong'}
+				{word: 'nutritious'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -68,7 +68,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				{word: 'stale'},
 				{word: 'harmful'},
 				{word: 'processed'},
-				{word: 'weak'}
+				{word: 'incomplete'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
