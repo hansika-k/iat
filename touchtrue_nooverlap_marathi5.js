@@ -208,8 +208,8 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				' साठी वर डावे बोट ठेवा <b>E</b> श्रेणीशी संबंधित आयटम <font color="#336600">leftCategory</font>. ' +
-				'<br/> साठी वर उजवे बोट ठेवा <b>I</b> श्रेणीशी संबंधित आयटम <font color="#336600">rightCategory</font>.<br/>' +
+				'  कॅटेगरी संबंधित आयटमसाठी तुमचे डावे बोट <b>E</b> वर ठेवा <font color="#336600">leftCategory</font>. ' +
+				'<br/> कॅटेगरी संबंधित आयटमसाठी तुमचे उजवे बोट <b>I</b> वर ठेवा <font color="#336600">rightCategory</font>.<br/>' +
 				' एक एक करून वस्तू दिसू लागतील.<br/><br/>' +
 				' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल ' +
 				' सुरु ठेवण्यासाठी दूसरे बटन दाबा <br/>' +
@@ -274,12 +274,12 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						' आयटम आणि साठी <b> डाव्या </b> हिरव्या भागावर डावे <font color="#336600">leftCategory</font> बोट ठेवा <font color="#0000ff">leftAttribute</font>.<br/>',
-						' आयटम आणि साठी <b> उजव्या </b> हिरव्या भागावर उजवे <font color="#336600">rightCategory</font> बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/>',
+						' संबंधित आयटमसाठी तुमचे डावे बोट <b>डाव्या</b> हिरव्या भागावर ठेवा <font color="#336600">leftCategory</font> आणि <font color="#0000ff">leftAttribute</font>.<br/>',
+						' संबंधित आयटमसाठी तुमचे उजवे बोट <b>उजवीकडे</b> हिरव्या भागावर ठेवा <font color="#336600">rightCategory</font> आणि <font color="#0000ff">rightAttribute</font>.<br/>',
 						'<br/>',
 						'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/>',
 					'</p>',
-					'<p align="center"> सुरु करण्यासाठी <b> </b> हिरव्या भागावर टच करा.</p>',
+					'<p align="center"> सुरु करण्यासाठी <b> हिरव्या </b> भागावर टच करा.</p>',
 				'</div>'
 			].join('\n'),
 
@@ -287,8 +287,8 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
 				'<b> लक्ष द्या, लेबल्सची स्थिती बदललेली आहे! </b><br/>' +
-				' साठी वर डावे बोट ठेवा <b>E</b> बोट ठेवा <font color="#336600">leftCategory</font>.<br/>' +
-				' साठी वर उजवे <b>I</b> बोट ठेवा <font color="#336600">rightCategory</font>.<br/><br/>' +
+				' साठी डाव्या बोटाला <b>E</b> वर ठेवा <font color="#336600">leftCategory</font>.<br/>' +
+				' उजवे बोट <b>I</b> साठी ठेवा <font color="#336600">rightCategory</font>.<br/><br/>' +
 				'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/><br/></p>' +
 				'<p align="center"> सुरु करण्यासाठी तुम्ही तयार असाल तेव्हा <b> स्पेस बार </b> दाबा. </font></p></div>',
 			instSwitchCategoriesTouch: [
@@ -299,13 +299,13 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
 						' लक्ष द्या, लेबल्सची स्थिती बदललेली आहे! <br/>',
-							' कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b> डावीकडील </b> हिरव्या भागावर डावे <font color="#336600">leftCategory</font> बोट ठेवा.<br/>',
-			 				' कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b> उजवीकडील </b> हिरव्या भागावर उजवे <font color="#336600">rightCategory</font> बोट ठेवा.<br/>',
+							' <font color="#336600">leftCategory</font>  कॅटेगरी आयटमसाठी तुमचे डावे बोट <b> डावीकडे </b> हिरव्या भागावर ठेवा.<br/>',
+			 				' <font color="#336600">rightCategory</font>  कॅटेगरी आयटमसाठी उजवे बोट <b> उजवीकडे </b> हिरव्या भागावर ठेवा.<br/>',
 							' एक एक करून वस्तू दिसू लागतील ',
 							'<br/>',
 							' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/>',
 						'</p>',
-						'<p align="center"> सुरु करण्यासाठी <b> </b> हिरव्या भागावर टच करा.</p>',
+						'<p align="center"> सुरु करण्यासाठी <b> हिरव्या </b> भागावर टच करा.</p>',
 				'</div>'
 			].join('\n'),
 
