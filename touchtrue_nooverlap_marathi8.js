@@ -205,16 +205,17 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 				'</div>'
 			].join('\n'),
 
-			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
-				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'  ज्या वस्तू <font color="#336600">leftCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या </b> बोटाने <b>E</b> बटन दाबा . ' +
-				'<br/> ज्या वस्तू  <font color="#336600">rightCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बोटाने <b>I</b> बटन दाबा .<br/>' +
-				' तुम्हाला स्क्रीन वर एक एक करून वस्तू दिसतील.<br/><br/>' +
-				' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल ' +
-				' सुरु ठेवण्यासाठी दूसरे बटन दाबा <br/>' 
-				'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>'+
-				'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
+	instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
+	'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+	'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
+	'  ज्या वस्तू <font color="#336600">leftCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या </b> बोटाने <b>E</b> बटन दाबा . ' +
+	'<br/> ज्या वस्तू  <font color="#336600">rightCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बोटाने <b>I</b> बटन दाबा .<br/>' +
+	' तुम्हाला स्क्रीन वर एक एक करून वस्तू दिसतील.<br/><br/>' +
+	' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल ' +
+	' सुरु ठेवण्यासाठी दूसरे बटन दाबा <br/>' +
+	'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>'+
+	'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
+
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
