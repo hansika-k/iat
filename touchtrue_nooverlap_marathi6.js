@@ -167,8 +167,8 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 			
 			instWidth : 99, //The width of the instructions stimulus
             
-			finalText : ' पुढील टास्ककडे सुरु ठेवण्यासाठी स्पेस दाबा ', 
-			finalTouchText : ' पुढील टास्कवर सुरु ठेवण्यासाठी तळभागातील हिरव्या भागावर टच करा',
+			finalText : ' पुढील टास्क साठी स्पेस दाबा ', 
+			finalTouchText : ' पुढील टास्क साठी खालील हिरव्या भागावर टच करा',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -182,12 +182,12 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>E</b> बटणावर डावे बोट ठेवा <font color="#0000ff">leftAttribute.</font>' +
-				'<br/> कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b>I</b> key for बटणावर उजवे बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'ज्या वस्तू <font color="#0000ff">leftAttribute.</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या </b> बोटाने <b>E</b> बटन दाबा ' +
+				'<br/> ज्या वस्तू  <font color="#0000ff">rightAttribute</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बोटाने <b>I</b> बटन दाबा.<br/><br/>' +
 				' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
 				' सुरु ठेवण्यासाठी दूसरे बटन दाबा.<br/>' +
-				'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/><br/></p>'+
-				'<p align="center"> सुरु करण्यासाठी तुम्ही तयार असाल तेव्हा <b> स्पेस बार </b> दाबा.</font></p></div>',
+				'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>'+
+				'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -195,11 +195,11 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						' कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी  <b> डावीकडील</b> हिरव्या भागावर डावे बोट ठेवा <font color="#0000ff">leftAttribute</font>.<br/>',
-						' कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b> उजवीकडील</b> हिरव्या भागावर उजवे बोट ठेवा <font color="#0000ff">rightAttribute</font>.<br/>',
-						' एक एक करून वस्तू दिसू लागतील.<br/>',
+						' ज्या वस्तू <font color="#0000ff">leftAttribute</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+						' ज्या वस्तू <font color="#0000ff">rightAttribute</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+						' तुम्हाला स्क्रीन वर एक एक करून वस्तू दिसतील.<br/>',
 						'<br/>',
-						' तुम्ही चूक केल्यास, एक लाल  <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला शक्य तितके पटापट जा</u> अचूक रहा.',
+						' तुम्ही चूक केल्यास, एक लाल  <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.',
 					'</p>',
 					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
 				'</div>'
@@ -208,13 +208,13 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'  कॅटेगरी संबंधित आयटमसाठी तुमचे डावे बोट <b>E</b> वर ठेवा <font color="#336600">leftCategory</font>. ' +
-				'<br/> कॅटेगरी संबंधित आयटमसाठी तुमचे उजवे बोट <b>I</b> वर ठेवा <font color="#336600">rightCategory</font>.<br/>' +
-				' एक एक करून वस्तू दिसू लागतील.<br/><br/>' +
+				'  ज्या वस्तू <font color="#336600">leftCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या </b> बोटाने <b>E</b> बटन दाबा . ' +
+				'<br/> ज्या वस्तू  <font color="#336600">rightCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बोटाने <b>I</b> बटन दाबा .<br/>' +
+				' तुम्हाला स्क्रीन वर एक एक करून वस्तू दिसतील.<br/><br/>' +
 				' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल ' +
-				' सुरु ठेवण्यासाठी दूसरे बटन दाबा <br/>' +
-				'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/><br/></p>'+
-				'<p align="center"> सुरु करण्यासाठी तुम्ही तयार असाल तेव्हा <b> स्पेस बार r</b> दाबा.</font></p></div>',
+				' सुरु ठेवण्यासाठी दूसरे बटन दाबा <br/>' 
+				'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>'+
+				'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -222,26 +222,26 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						' कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b> डावीकडील </b> हिरव्या भागावर डावे बोट ठेवा <font color="#336600">leftCategory</font>.<br/>',
-						' कॅटेगरीशी संबंधित असलेल्या वस्तूंसाठी <b> उजवीकडील </b> हिरव्या भागावर उजवे बोट ठेवा <font color="#336600">rightCategory</font>.<br/>',
-						' एक एक करून वस्तू दिसू लागतील.<br/>',
+						' ज्या वस्तू <font color="#336600">leftCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+						' ज्या वस्तू <font color="#336600">rightCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+						' तुम्हाला स्क्रीन वर एक एक करून वस्तू दिसतील.<br/>',
 						'<br/>',
-						' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. इतर भागाला टच करा. <u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.',
+						' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. दुसऱ्या बाजूला टच करा. <u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.',
 					'</p>',
-					'<p align="center"> सुरु करण्यासाठी <b> </b> हिरव्या भागावर टच करा.</p>',
+					'<p align="center"> पुढील टास्क साठी <b>खालील हिरव्या</b> भागावर टच करा.</p>',
 				'</div>'
 			].join('\n'),
 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'साठी <b>E</b> वापरा <font color="#336600">leftCategory</font> आणि साठी <font color="#0000ff">leftAttribute</font>.<br/>' +
-				' साठी <b>I</b> वापरा <font color="#336600">rightCategory</font> आणि साठी  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'ज्या वस्तू <font color="#336600">leftCategory</font> आणि <font color="#0000ff">leftAttribute</font> या दोन्ही कॅटेगरी मध्ये बसतात त्यांच्यासाठी तुमच्या डाव्या बोटाने <b>डाव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>' +
+				' ज्या वस्तू <font color="#336600">rightCategory</font> आणि <font color="#0000ff">rightAttribute</font> या दोन्ही कॅटेगरी मध्ये बसतात त्यांच्यासाठी तुमच्या <b>उजव्या</b> बोटाने उजव्या बाजूच्या हिरव्या भागावर दाबा.<br/>' +
 				' प्रत्येक वस्तू फक्त एकाच कॅटेगरीशी संबंधित आहे.<br/><br/>' +
 				' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. ' +
 				 'सुरु ठेवण्यासाठी दूसरे बटन दाबा. <br/>' + 
-				'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/><br/></p>' +
-				'<p align="center"> सुरु करण्यासाठी तुम्ही तयार असाल तेव्हा <b> स्पेस बार </b> दाबा. </font></p></div>',
+				'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>' +
+				'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा. </font></p></div>',
 			instFirstCombinedTouch:[
 				'<div>',
 					'<p align="center">',
@@ -250,8 +250,8 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						' आयटम आणि साठी <b> डाव्या </b> हिरव्या भागावर <font color="#336600">leftCategory</font> डावे बोट ठेवा <font color="#0000ff">leftAttribute</font>.</br>',
-						' आयटम आणि साठी <b> उजव्या </b> हिरव्या भागावर उजवे <font color="#336600">rightCategory</font> बोट ठेवा <font color="#0000ff">rightAttribute</font>.</br>',
+						'ज्या वस्तू <font color="#336600">leftCategory</font> आणि <font color="#0000ff">leftAttribute</font> मध्ये बसतात त्यांच्यासाठी तुमच्या डाव्या बोटाने <b>डाव्या</b> बाजूच्या हिरव्या भागावर दाबा.</br>',
+						'ज्या वस्तू <font color="#336600">rightCategory</font> आणि <font color="#0000ff">rightAttribute</font> मध्ये बसतात त्यांच्यासाठी तुमच्या उजव्या बोटाने <b>उजव्या</b> बाजूच्या हिरव्या भागावर दाबा.</br>',
 							' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.</br>',
 						'</p>',
 						'<p align="center"> सुरु करण्यासाठी <b> </b> हिरव्या भागावर टच करा.</p>',
@@ -261,12 +261,12 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				' हे मागील भागासारखेच आहे <br/>' +
-				' साठी  <b>E</b> वापरा <font color="#336600">leftCategory</font> आणि साठी <font color="#0000ff">leftAttribute</font>.<br/>' +
-				' साठी   <b>I</b> वापरा <font color="#336600">rightCategory</font> आणि साठी  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'हे मागच्या भगासारखेच आहे<br/>' +
+				'<font color="#336600">leftCategory</font> आणि <font color="#0000ff">leftAttribute</font> साठी <b>E</b> बटन दाबा.<br/>' +
+				'<font color="#336600">rightCategory</font> आणि <font color="#0000ff">rightAttribute</font> साठी <b>I</b> बटन दाबा.<br/>' +
 				' प्रत्येक वस्तू फक्त एकाच कॅटेगरीशी संबंधित आहे.<br/><br/>' +
-				'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/><br/></p>' +
-				'<p align="center"> सुरु करण्यासाठी तुम्ही तयार असाल तेव्हा <b> स्पेस बार </b> दाबा. </font></p></div>',
+				'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>' +
+				'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा. </font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
 					'<p align="center"><u>Part blockNum of nBlocks</u></p>',
@@ -274,23 +274,23 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						' संबंधित आयटमसाठी तुमचे डावे बोट <b>डाव्या</b> हिरव्या भागावर ठेवा <font color="#336600">leftCategory</font> आणि <font color="#0000ff">leftAttribute</font>.<br/>',
-						' संबंधित आयटमसाठी तुमचे उजवे बोट <b>उजवीकडे</b> हिरव्या भागावर ठेवा <font color="#336600">rightCategory</font> आणि <font color="#0000ff">rightAttribute</font>.<br/>',
+						'ज्या वस्तू <font color="#336600">leftCategory</font> आणि <font color="#0000ff">leftAttribute</font> मध्ये बसतात त्यांच्यासाठी तुमच्या डाव्या बोटाने <b>डाव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+						'ज्या वस्तू <font color="#336600">rightCategory</font> आणि <font color="#0000ff">rightAttribute</font> मध्ये बसतात त्यांच्यासाठी तुमच्या उजव्या बोटाने <b>उजव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
 						'<br/>',
-						'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/>',
+						'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/>',
 					'</p>',
-					'<p align="center"> सुरु करण्यासाठी <b> हिरव्या </b> भागावर टच करा.</p>',
+					'<p align="center"> पुढील टास्क साठी खालील हिरव्या भागावर टच करा.</p>',
 				'</div>'
 			].join('\n'),
 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b> लक्ष द्या, लेबल्सची स्थिती बदललेली आहे! </b><br/>' +
-				' साठी डाव्या बोटाला <b>E</b> वर ठेवा <font color="#336600">leftCategory</font>.<br/>' +
-				' उजवे बोट <b>I</b> साठी ठेवा <font color="#336600">rightCategory</font>.<br/><br/>' +
-				'<u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/><br/></p>' +
-				'<p align="center"> सुरु करण्यासाठी तुम्ही तयार असाल तेव्हा <b> स्पेस बार </b> दाबा. </font></p></div>',
+				'<b> लक्ष द्या! लेबल्स च्या बाजू बदलल्या आहेत! </b><br/>' +
+				' <font color="#336600">leftCategory</font> साठी डाव्या बोटाला <b>E</b> वर ठेवा .<br/>' +
+				' <font color="#336600">rightCategory</font> साठी उजवे बोटाला <b>I</b> वर ठेवा .<br/><br/>' +
+				'<u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/><br/></p>' +
+				'<p align="center"> तुम्ही सुरू करायला तयार असाल तेव्हा <b>स्पेस बार</b> दाबा. </font></p></div>',
 			instSwitchCategoriesTouch: [
 				'<div>',
 					'<p align="center">',
@@ -298,14 +298,14 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						' लक्ष द्या, लेबल्सची स्थिती बदललेली आहे! <br/>',
-							' <font color="#336600">leftCategory</font>  कॅटेगरी आयटमसाठी तुमचे डावे बोट <b> डावीकडे </b> हिरव्या भागावर ठेवा.<br/>',
-			 				' <font color="#336600">rightCategory</font>  कॅटेगरी आयटमसाठी उजवे बोट <b> उजवीकडे </b> हिरव्या भागावर ठेवा.<br/>',
-							' एक एक करून वस्तू दिसू लागतील ',
+						' लक्ष द्या! लेबल्स च्या बाजू बदलल्या आहेत! <br/>',
+							' ज्या वस्तू <font color="#336600">leftCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>डाव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+			 				' ज्या वस्तू <font color="#336600">rightCategory</font> कॅटेगरी मध्ये बसतात त्या वस्तुंसाठी <b>उजव्या</b> बाजूच्या हिरव्या भागावर दाबा.<br/>',
+							' तुम्हाला स्क्रीन वर एक एक करून वस्तू दिसतील ',
 							'<br/>',
-							' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला शक्य तितके पटापट जा </u> अचूक रहा.<br/>',
+							' तुम्ही चूक केल्यास, एक लाल <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.<br/>',
 						'</p>',
-						'<p align="center"> सुरु करण्यासाठी <b> हिरव्या </b> भागावर टच करा.</p>',
+						'<p align="center"> पुढील टास्क साठी खालील हिरव्या भागावर टच करा.</p>',
 				'</div>'
 			].join('\n'),
 
