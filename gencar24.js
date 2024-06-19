@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_nooverlap_marathi8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://github.com/hansika-k/iat/blob/main/touchtrue_nooverlap_marathi_f.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
