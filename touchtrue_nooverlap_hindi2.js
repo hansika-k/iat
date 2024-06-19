@@ -138,134 +138,302 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//Note: the player sends block3Cond at the end of the task (saved in the explicit table) to inform about the categories in that block.
 			//In the block3Cond variable: "att1/cat1,att2/cat2" means att1 and cat1 on the left, att2 and cat2 on the right.
 
-			//Show a reminder what to do on error, throughout the task
-			remindError : true,
+			//Show a reminder what to do on error, throughout the task 
+remindError : true,
+remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' + 
 
-			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
-			'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' +
-			'जारी रखने के लिए दूसरा बटन दबाएं <p/>',
-
-			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
-'यदि आप कोई गलती करते हैं, तो एक लाल			 <font color="#ff0000"><b>X</b></font> दिखाई देगा ' +
-'जारी रखने के लिए दूसरी ओर स्पर्श करें<p/>',
-
-			errorCorrection : true, //Should participants correct error responses?
-			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
-			ITIDuration : 250, //Duration between trials.
-
-			fontColor : '#000000', //The default color used for printed messages.
-			
-			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "E" for', 
-			rightKeyText : 'Press "I" for', 
-			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
-			//Text and style for the separator between the top and bottom category labels.
-			orText : 'or', 
-			orCss : {'font-size':'1.8em', color:'#000000'},
-			
-			instWidth : 99, //The width of the instructions stimulus
-            
-			finalText : 'अगले कार्य को जारी रखने के लिए स्पेस दबाएं’, 
-			finalTouchText : 'अगले कार्य को जारी रखने के लिए निचले हरे क्षेत्र को दबाएं',
-
-			touchMaxStimulusWidth : '50%', 
-			touchMaxStimulusHeight : '50%', 
-			bottomTouchCss: {}, //Add any CSS value you want for changing the css of the bottom touch area.
-
-			//Instructions text.
-			// You can use the following variables and they will be replaced by
-			// the name of the categories and the block's number variables:
-			// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
-			// Notice that this is HTML text.
-			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' + 
-'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></font></p>' + 
-'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' + 
-'बायीं उंगली <b>E</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#0000ff">leftAttribute</font>.' + 
-'<br/> दाहिनी उंगली <b>I</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#0000ff">rightAttribute</font>.<br/><br/>' + 
 'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' + 
+
+'जारी रखने के लिए दूसरा बटन दबाएं <p/>', 
+
+remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' + 
+
+'यदि आप कोई गलती करते हैं, तो एक लाल			 <font color="#ff0000"><b>X</b></font> दिखाई देगा ' + 
+
+'जारी रखने के लिए दूसरी ओर स्पर्श करें<p/>', 
+
+errorCorrection : true, //Should participants correct error responses? 
+
+errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false) 
+
+ITIDuration : 250, //Duration between trials. 
+
+ 
+
+fontColor : '#000000', //The default color used for printed messages.  
+
+//Text and style for key instructions displayed about the category labels. 
+
+leftKeyText : 'Press "E" for',  
+
+rightKeyText : 'Press "I" for',  
+
+keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'}, 
+
+//Text and style for the separator between the top and bottom category labels. 
+
+orText : 'or',  
+
+orCss : {'font-size':'1.8em', color:'#000000'},  
+
+instWidth : 99, //The width of the instructions stimulus 
+
+finalText : 'अगले कार्य को जारी रखने के लिए स्पेस दबाएं',  
+
+finalTouchText : 'अगले कार्य को जारी रखने के लिए निचले हरे क्षेत्र को दबाएं', 
+
+touchMaxStimulusWidth : '50%',  
+
+touchMaxStimulusHeight : '50%',  
+
+bottomTouchCss: {}, //Add any CSS value you want for changing the css of the bottom touch area. 
+
+//Instructions text. 
+
+// You can use the following variables and they will be replaced by 
+
+// the name of the categories and the block's number variables: 
+
+// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks. 
+
+// Notice that this is HTML text. 
+
+instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' + 
+
+'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' + 
+
+'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' + 
+
+'बायीं उंगली <b>E</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं   <font color="#0000ff">leftAttribute.</font>' + 
+
+'<br/> दाहिनी उंगली <b>I</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#0000ff">rightAttribute</font>.<br/><br/>' + 
+
+'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' +				  
 'जारी रखने के लिए दूसरा बटन दबाएँ <br/>' + 
-'<u> जितनी जल्दी हो सके बटन दबाएं </u> सटीकता के साथ <br/><br/></p>' + 
-'<p align="center"> दबाओ <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हो </p></div>', 
+
+'<u> जितनी जल्दी हो सके बटन दबाएं </u> सटीकता के साथ <br/><br/></p>'+ 
+
+'<p align="center"> दबाओ <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हो </font></p></div>', 
 
 instAttributePracticeTouch: [ 
+
 '<div>', 
+
 '<p align="center">', 
+
 '<u>Part blockNum of nBlocks</u>', 
+
 '</p>', 
+
 '<p align="left" style="margin-left:5px">', 
+
 '<br/>', 
+
 'बाईं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#0000ff">leftAttribute</font>.<br/>', 
+
 'दाहिनी उंगली रखें <b> बाएं </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#0000ff">rightAttribute</font>.<br/>', 
+
 'आइटम्स एक के बाद एक दिखाई देंगे <br/>', 
+
 '<br/>', 
+
 'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा दूसरी ओर स्पर्श करें <u> जितनी जल्दी हो सके बटन दबाएं </u> सटीकता के साथ', 
+
 '</p>', 
+
 '<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र </p>', 
+
 '</div>' 
+
 ].join('\n'), 
+
+ 
 
 instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' + 
-'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></font></p>' + 
+
+'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' + 
+
 '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' + 
+
 'बाईं उंगली <b>E</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित है <font color="#336600">leftCategory</font>. ' + 
+
 '<br/> दाहिनी उंगली <b>I</b> बटन पर रखें उन वस्तुओं के लिए जो श्रेणी से संबंधित है <font color="#336600">rightCategory</font>.<br/>' + 
+
 'आइटम्स एक के बाद एक दिखाई देंगे <br/><br/>' + 
+
 'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा ' + 
-'जारी रखने के लिए दूसरा बटन दबाएँ <br/>' + 
-'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ <br/><br/></p>' + 
-'<p align="center"> कृपया दबाएं <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों </p></div>', 
+
+'जारी रखने के लिए दूसरा बटन दबाएँ				 <br/>' + 
+
+'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ <br/><br/></p>'+ 
+
+'<p align="center"> कृपया दबाएं <b> स्पेस बार /b> जब आप शुरू करने के लिए तैयार हों </font></p></div>', 
 
 instCategoriesPracticeTouch: [ 
+
 '<div>', 
+
 '<p align="center">', 
+
 '<u>Part blockNum of nBlocks</u>', 
+
 '</p>', 
+
 '<p align="left" style="margin-left:5px">', 
+
 '<br/>', 
-'बाईं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#336600">leftCategory</font>.<br/>', 
+
+'बाईं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं   <font color="#336600">leftCategory</font>.<br/>', 
+
 'दाहिनी उंगली रखें <b> दाहिने </b> हरे क्षेत्र पर उन वस्तुओं के लिए जो श्रेणी से संबंधित हैं <font color="#336600">rightCategory</font>.<br/>', 
+
 'आइटम्स एक के बाद एक दिखाई देंगे <br/>', 
+
 '<br/>', 
-'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा. दूसरी ओर स्पर्श करें <u> जितनी जल्दी हो सके बटन दबाएं </u> सटीकता के साथ', 
+
+'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा . दूसरी ओर स्पर्श करें  <u> जितनी जल्दी हो सके करो </u> सटीकता के साथ', 
+
 '</p>', 
+
 '<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र </p>', 
+
 '</div>' 
+
 ].join('\n'), 
 
+ 
 instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' + 
-'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></font></p>' + 
+'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' + 
 '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' + 
 'उपयोग करें <b>E</b> बटन का <font color="#336600">leftCategory</font> के लिए, और <font color="#0000ff">leftAttribute</font>.<br/>' + 
-'उपयोग करें <b>I</b> बटन का <font color="#336600">rightCategory</font> के लिए, और <font color="#0000ff">rightAttribute</font>.<br/>' + 
+'उपयोग करें <b>I</b> बटन का <font color="#336600">rightCategory</font> के लिए, और  <font color="#0000ff">rightAttribute</font>.<br/>' + 
 'प्रत्येक वस्तु केवल एक श्रेणी से संबंधित है <br/><br/>' + 
 'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा.' + 
 'जारी रखने के लिए दूसरा बटन दबाएँ <br/>' +  
 '<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ <br/><br/></p>' + 
-'<p align="center"> कृपया दबाएं <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों </p></div>', 
+'<p align="center"> कृपया दबाएं <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों </font></p></div>',
+      
+instFirstCombinedTouch:[ 
 
-instFirstCombinedTouch: [ 
 '<div>', 
+
 '<p align="center">', 
+
 '<u>Part blockNum of nBlocks</u>', 
+
 '</p>', 
+
 '<br/>', 
+
 '<br/>', 
+
 '<p align="left" style="margin-left:5px">', 
-'बाईं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर <font color="#336600">leftCategory</font> वस्तुओं के लिए और <font color="#0000ff">leftAttribute</font>.</br>', 
-'दाहिनी उंगली रखें <b> दाहिनी </b> हरे क्षेत्र पर <font color="#336600">rightCategory</font> वस्तुओं के लिए और <font color="#0000ff">rightAttribute</font>.</br>', 
-'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा. दूसरी ओर स्पर्श करें <u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ</br>', 
+
+'बाईं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर <font color="#336600">leftCategory</font> वस्तुओं के लिए और <font color="#0000ff">leftAttribute</font>.</br> के लिए', 
+
+'दाहिनी उंगली रखें 						 <b> दाहिनी </b> हरे क्षेत्र पर <font color="#336600">rightCategory</font> वस्तुओं के लिए और <font color="#0000ff">rightAttribute</font>.</br> के लिए', 
+'यदि आप कोई गलती करते हैं, तो एक लाल <font color="#ff0000"><b>X</b></font> दिखाई देगा. दूसरी ओर स्पर्श करें <u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ</br>',
+
 '</p>', 
+
 '<p align="center"> शुरू करने के लिए, स्पर्श करें <b> निचला </b> हरा क्षेत्र </p>', 
+
 '</div>' 
+
 ].join('\n'), 
 
+ 
+
 instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' + 
-'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></font></p>' + 
+
+'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' + 
+
 '<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' + 
+
 'यह पिछले भाग के समान ही है <br/>' + 
+
 'उपयोग करें <b>E</b> बटन का <font color="#336600">leftCategory</font> के लिए और <font color="#0000ff">leftAttribute</font>.<br/>' + 
-'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for <font color="#0000ff">rightAttribute</font>.<br/>' + 
-'प्रत्येक वस्तु केवल एक श्रेणी से संबंधित है <
+
+'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/> के लिए ' + 
+
+'प्रत्येक वस्तु केवल एक श्रेणी से संबंधित है <br/><br/>' + 
+
+'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ <br/><br/></p>' + 
+
+'<p align="center"> कृपया दबाएं <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों </font></p></div>', 
+
+instSecondCombinedTouch:[ 
+
+'<div>', 
+
+'<p align="center"><u>Part blockNum of nBlocks</u></p>', 
+
+'<br/>', 
+
+'<br/>',
+
+'<p align="left" style="margin-left:5px">', 
+
+'बायीं उंगली रखें <b> बाएं </b> हरे क्षेत्र पर <font color="#336600">leftCategory</font> वस्तुओं के लिए और <font color="#0000ff">leftAttribute</font>.<br/>', 
+
+'दाहिनी उंगली रखें <b> दाहिनी </b> हरे क्षेत्र पर <font color="#336600">rightCategory</font> वस्तुओं के लिए और <font color="#0000ff">rightAttribute</font>.<br/> के लिए ', 
+
+'<br/>', 
+
+'<u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ <br/>', 
+
+'</p>', 
+
+'<p align="center"> स्पर्श करें <b> निचले </b> हरे क्षेत्र को शुरू करने के लिए </p>', 
+
+'</div>' 
+
+].join('\n'), 
+
+ 
+
+instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' + 
+'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' + 
+'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' + 
+'<b> सावधान रहें, लेबल ने स्थान बदल दिया है! </b><br/>' + 
+'बाईं उंगली का उपयोग करें <b>E</b> बटन पर <font color="#336600">leftCategory</font>.<br/> के लिए ' + 
+'दाहिनी उंगली का प्रयोग करें <b>I</b> बटन पर <font color="#336600">rightCategory</font>.<br/><br/>' + 
+'<u> जितनी जल्दी हो सके करो </u> सटीकता के साथ <br/><br/></p>' + 
+'<p align="center"> कृपया दबाएँ <b> स्पेस बार </b> जब आप शुरू करने के लिए तैयार हों </font></p></div>',
+
+instSwitchCategoriesTouch: [ 
+
+'<div>', 
+
+'<p align="center">', 
+
+'<u>Part blockNum of nBlocks</u>', 
+
+'</p>', 
+
+'<p align="left" style="margin-left:5px">', 
+
+'<br/>', 
+
+'सावधान रहें, लेबलों ने स्थान बदल दिया है! <br/>', 
+
+'बायीं अंगुली रखें <b> बायीं </b> हरे क्षेत्र पर <font color="#336600">leftCategory</font> items.<br/>', 
+
+'दाहिनी उंगली रखें <b> दाहिनी </b> हरे क्षेत्र पर <font color="#336600">rightCategory</font> items.<br/>', 
+
+'आइटम एक समय में एक दिखाई देंगे', 
+
+'<br/>', 
+
+'यदि आप कोई गलती करते हैं, तो एक लाल  <font color="#ff0000"><b>X</b></font> दिखाई देगा. दूसरी ओर स्पर्श करें <u> जितनी जल्दी हो सके बटन दबाएँ </u> सटीकता के साथ <br/>', 
+
+'</p>', 
+
+'<p align="center"> स्पर्श करें <b> निचले </b> हरे क्षेत्र को शुरू करने के लिए.</p>', 
+
+'</div>' 
+
+].join('\n'),
 
 			instThirdCombined : 'instFirstCombined', //this means that we're going to use the instFirstCombined property for the third combined block as well. You can change that.
 			instFourthCombined : 'instSecondCombined', //this means that we're going to use the instSecondCombined property for the fourth combined block as well. You can change that.
@@ -731,12 +899,12 @@ instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:
 			}
 
 			function buildStyle(css){
-				css || (css = {});
-				var style = '';
-				for (var i in css) {style += i + ':' + css[i] + ';';}
-				return style;
-			}
-
+    if (!css) css = {};
+    var style = '';
+    for (var i in css) {style += i + ':' + css[i] + ';';}
+    return style;
+}
+      
 			var template = '' +
 			'   <div style="margin:0 1em; text-align:center"> '  +
 			'   	<div style="font-size:0.8em; <%= stimulusData.keysCss %>; visibility:<%= stimulusData.isTouch ? \'hidden\' : \'visible\' %>">  '  +
