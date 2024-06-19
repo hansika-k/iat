@@ -201,7 +201,7 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
 						'<br/>',
 						' तुम्ही चूक केल्यास, एक लाल  <font color="#ff0000"><b>X</b></font> दिसेल. सुरु ठेवण्यासाठी दुसऱ्या बाजूला टच करा. <u> तुम्हाला जितके शक्य होईल तितके पटापट करा </u> आणि अचूक रहा.',
 					'</p>',
-					'<p align="center"> सुरु करण्यासाठी <b> </b> हिरव्या भागावर टच करा.</p>',
+					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
 				'</div>'
 			].join('\n'),
 
