@@ -35,9 +35,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 		},
 		attribute1 :
 		{
-			name : 'Analytical',
+			name : 'Hard Skills',
 			title : {
-				media : {word : 'Analytical'},
+				media : {word : 'Hard Skills'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
@@ -51,9 +51,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 		},
 		attribute2 :
 		{
-			name : 'Intuitive',
+			name : 'Soft Skills',
 			title : {
-				media : {word : 'Intuitive'},
+				media : {word : 'Soft Skills'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
