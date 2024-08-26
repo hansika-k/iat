@@ -12,8 +12,8 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
 				{word: 'Tom'},
-				{word: 'Ling'},
-				{word: 'Somsak'},
+				{word: 'John'},
+				{word: 'Jack'},
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -27,8 +27,8 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
 				{word: 'Jane'},
-				{word: 'Jing'},
-				{word: 'Cho'},
+				{word: 'Jill'},
+				{word: 'Sally'},
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
