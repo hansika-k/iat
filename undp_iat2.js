@@ -42,9 +42,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            	{word: 'good'},
-				{word: 'wonderful'},
-				{word: 'great'},
+            	{word: 'delightful'},
+				{word: 'include'},
+				{word: 'strong'},
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -58,9 +58,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-          {word: 'bad'},
-				{word: 'terrible'},
-				{word: 'rotten'},
+          {word: 'disgusting'},
+				{word: 'exclude'},
+				{word: 'weak'},
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
