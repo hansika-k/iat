@@ -42,9 +42,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-            	{word: 'precise'},
-				{word: 'systematic'},
-				{word: 'logical'},
+            	{word: 'planning'},
+				{word: 'management'},
+				{word: 'analytical'},
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -58,9 +58,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-          {word: 'instictive'},
-				{word: 'spontaneous'},
-				{word: 'automatic'},
+          {word: 'empathy'},
+				{word: 'teamwork'},
+				{word: 'intuition'},
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
