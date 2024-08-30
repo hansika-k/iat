@@ -58,7 +58,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue_noov
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-          {word: 'disgusting'},
+          {word: 'upsetting'},
 				{word: 'exclude'},
 				{word: 'weak'},
 			],
